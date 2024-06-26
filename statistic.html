@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dazel</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Link Font Awesome CSS from CDN -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="./css/mdb.min.css" /> -->
+    <link rel="stylesheet" href="./css/master.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&#038;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row d-flex flex-row">
+        <div class="col-md-2 p-0 parent-side-nav bg-white">
+          <div class="parent">
+            <div class="logo py-1 px-3 mt-2 d-flex align-items-center">
+              <img
+                src="https://dokkan.agency/wp-content/uploads/2021/11/Logo-main-copy.png"
+                alt=""
+              />
+              <!-- <span class="px-2">Dazel</span> -->
+            </div>
+          </div>
+          <div class="side-nav">
+            <nav class="sidebar py-2 mb-4">
+              <ul class="nav flex-column" id="nav_accordion">
+                <li
+                  class="nav-item "
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  data-bs-title="Home Dashboard"
+                >
+                  <a
+                    class="nav-link d-flex gap-2 align-items-center"
+                    href="index.html"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_305_51625)">
+                        <path
+                          d="M5.25 0H3C1.34315 0 0 1.34315 0 3V5.25C0 6.90685 1.34315 8.25 3 8.25H5.25C6.90685 8.25 8.25 6.90685 8.25 5.25V3C8.25 1.34315 6.90685 0 5.25 0Z"
+                          fill="#1D1F2C"
+                        />
+                        <path
+                          d="M15 0H12.75C11.0931 0 9.75 1.34315 9.75 3V5.25C9.75 6.90686 11.0931 8.25001 12.75 8.25001H15C16.6568 8.25001 18 6.90686 18 5.25V3C18 1.34315 16.6568 0 15 0Z"
+                          fill="#1D1F2C"
+                        />
+                        <path
+                          d="M5.25 9.75H3C1.34315 9.75 0 11.0931 0 12.75V15C0 16.6569 1.34315 18 3 18H5.25C6.90685 18 8.25 16.6569 8.25 15V12.75C8.25 11.0931 6.90685 9.75 5.25 9.75Z"
+                          fill="#1D1F2C"
+                        />
+                        <path
+                          d="M15 9.75H12.75C11.0931 9.75 9.75 11.0931 9.75 12.75V15C9.75 16.6569 11.0931 18 12.75 18H15C16.6568 18 18 16.6569 18 15V12.75C18 11.0931 16.6568 9.75 15 9.75Z"
+                          fill="#1D1F2C"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_305_51625">
+                          <rect width="18" height="18" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span>Dashboard</span>
+                  </a>
+                </li>
+                <li class="nav-item has-submenu ">
+                  <a
+                    class="nav-link d-flex align-items-center gap-2"
+                    href="#"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="right"
+                    data-bs-title="E-commerce"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_305_28817)">
+                        <path
+                          d="M17.0347 3.05775C16.8238 2.80458 16.5597 2.60096 16.2612 2.46136C15.9626 2.32176 15.637 2.2496 15.3075 2.25H3.1815L3.15 1.98675C3.08554 1.43956 2.82254 0.935049 2.41087 0.568858C1.9992 0.202667 1.46747 0.000256345 0.9165 0L0.75 0C0.551088 0 0.360322 0.0790176 0.21967 0.21967C0.0790176 0.360322 0 0.551088 0 0.75C0 0.948912 0.0790176 1.13968 0.21967 1.28033C0.360322 1.42098 0.551088 1.5 0.75 1.5H0.9165C1.1002 1.50002 1.2775 1.56747 1.41478 1.68954C1.55206 1.81161 1.63976 1.97981 1.66125 2.16225L2.69325 10.9373C2.80039 11.8498 3.23886 12.6913 3.92543 13.302C4.612 13.9127 5.49889 14.25 6.41775 14.25H14.25C14.4489 14.25 14.6397 14.171 14.7803 14.0303C14.921 13.8897 15 13.6989 15 13.5C15 13.3011 14.921 13.1103 14.7803 12.9697C14.6397 12.829 14.4489 12.75 14.25 12.75H6.41775C5.95354 12.7487 5.5011 12.6038 5.12245 12.3353C4.7438 12.0668 4.45748 11.6877 4.30275 11.25H13.2428C14.122 11.2501 14.9733 10.9412 15.6479 10.3773C16.3225 9.81348 16.7775 9.03052 16.9335 8.16525L17.5223 4.89975C17.581 4.57576 17.5678 4.2428 17.4836 3.92448C17.3993 3.60616 17.2461 3.31026 17.0347 3.05775Z"
+                          fill="#1D1F2C"
+                        />
+                        <path
+                          d="M5.25 18.0005C6.07842 18.0005 6.74999 17.3289 6.74999 16.5005C6.74999 15.6721 6.07842 15.0005 5.25 15.0005C4.42157 15.0005 3.75 15.6721 3.75 16.5005C3.75 17.3289 4.42157 18.0005 5.25 18.0005Z"
+                          fill="#1D1F2C"
+                        />
+                        <path
+                          d="M12.75 18.0005C13.5784 18.0005 14.25 17.3289 14.25 16.5005C14.25 15.6721 13.5784 15.0005 12.75 15.0005C11.9216 15.0005 11.25 15.6721 11.25 16.5005C11.25 17.3289 11.9216 18.0005 12.75 18.0005Z"
+                          fill="#1D1F2C"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_305_28817">
+                          <rect width="18" height="18" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="w-100 d-flex justify-content-between align-items-center">E-Commerce  <i class="fa-solid fa-caret-down"></i></span>
+                    <!-- <i class="bi small bi-caret-down-fill"></i> -->
+                  </a>
+                  <ul class="submenu collapse">
+                    <li
+                      class="py-0"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      data-bs-title="Product Page"
+                    >
+                      <a class="nav-link" href="product.html">
+                        <i class="fa-brands fa-product-hunt"></i>
+                        <span>Product</span>
+                      </a>
+                    </li>
+                    <li
+                      class="py-0"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      data-bs-title="Order Page"
+                    >
+                      <a class="nav-link" href="order.html">
+                        <i class="fa-solid fa-box-open"></i>
+                        <span>Orders</span>
+                      </a>
+                    </li>
+                    <li
+                      class="py-0"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      data-bs-title="Categories Page"
+                    >
+                      <a class="nav-link" href="categories.html">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <span>Categories</span>
+                      </a>
+                    </li>
+                    <li
+                      class="py-0"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      data-bs-title="Customer Page"
+                    >
+                      <a class="nav-link" href="coustomer.html">
+                        <i class="fa-solid fa-person"></i>
+                        <span>Customer</span>
+                      </a>
+                    </li>
+                    <li
+                      class="py-0"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      data-bs-title="Seller Page"
+                    >
+                      <a class="nav-link" href="saller.html">
+                        <i class="fa-solid fa-store"></i>
+                        <span>Seller</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="nav-item "
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  data-bs-title="Project Page"
+                >
+                  <a
+                    class="nav-link d-flex align-items-center gap-2"
+                    href="project.html"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_305_71822)">
+                        <path
+                          d="M10.4999 5.25V0.345C11.1937 0.607001 11.8239 1.01348 12.3487 1.5375L14.9617 4.152C15.4863 4.67616 15.8931 5.30617 16.1549 6H11.2499C11.051 6 10.8603 5.92098 10.7196 5.78033C10.579 5.63968 10.4999 5.44891 10.4999 5.25ZM16.4999 7.86375V14.25C16.4987 15.2442 16.1033 16.1973 15.4003 16.9003C14.6973 17.6033 13.7441 17.9988 12.7499 18H5.24994C4.25574 17.9988 3.30261 17.6033 2.5996 16.9003C1.8966 16.1973 1.50113 15.2442 1.49994 14.25V3.75C1.50113 2.7558 1.8966 1.80267 2.5996 1.09966C3.30261 0.396661 4.25574 0.00119089 5.24994 0L8.63619 0C8.75844 0 8.87919 0.00975 8.99994 0.018V5.25C8.99994 5.84674 9.23699 6.41903 9.65895 6.84099C10.0809 7.26295 10.6532 7.5 11.2499 7.5H16.4819C16.4902 7.62075 16.4999 7.7415 16.4999 7.86375ZM12.5429 10.7332C12.4058 10.5893 12.2172 10.5057 12.0185 10.5008C11.8198 10.4959 11.6273 10.5701 11.4832 10.707L8.78319 13.2803C8.71104 13.3528 8.62481 13.4099 8.5298 13.4479C8.43478 13.4859 8.333 13.504 8.23071 13.5012C8.12842 13.4984 8.02778 13.4747 7.935 13.4315C7.84221 13.3884 7.75924 13.3267 7.69119 13.2502L6.49944 12.1898C6.42587 12.1242 6.34009 12.0737 6.24702 12.0412C6.15394 12.0088 6.05539 11.995 5.95698 12.0006C5.75824 12.012 5.57216 12.1019 5.43969 12.2505C5.37409 12.3241 5.32363 12.4098 5.29119 12.5029C5.25874 12.596 5.24494 12.6945 5.25058 12.793C5.26198 12.9917 5.35185 13.1778 5.50044 13.3102L6.65844 14.3407C7.07819 14.7606 7.64688 14.9975 8.24056 14.9999C8.83425 15.0023 9.40482 14.77 9.82794 14.3535L12.5167 11.793C12.6606 11.6559 12.7442 11.4673 12.7491 11.2686C12.754 11.0698 12.6799 10.8773 12.5429 10.7332Z"
+                          fill="#1D1F2C"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_305_71822">
+                          <rect width="18" height="18" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span>Project</span>
+                  </a>
+                </li>
+                <li
+                  class="nav-item has-submenu"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  data-bs-title="Contact Page"
+                >
+                  <a class="nav-link d-flex align-items-center gap-1" href="#">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_305_80753)">
+                        <path
+                          d="M12.0001 8.95936C12.631 8.95936 13.1424 8.44794 13.1424 7.8171C13.1424 7.18625 12.631 6.67484 12.0001 6.67484C11.3693 6.67484 10.8579 7.18625 10.8579 7.8171C10.8579 8.44794 11.3693 8.95936 12.0001 8.95936Z"
+                          fill="#1D1F2C"
+                        />
+                        <path
+                          d="M17.9999 3.00064H5.99986C4.33208 3.01382 2.98989 4.37483 2.99987 6.04264V15.1701C2.98989 16.838 4.33198 18.1993 5.99986 18.2129H8.1921L11.0031 20.6129C11.5599 21.1217 12.4107 21.1292 12.9763 20.6301L15.8601 18.2121H17.9998C19.6677 18.1985 21.0098 16.8373 20.9998 15.1694V6.04264C21.0099 4.37483 19.6677 3.01382 17.9999 3.00064ZM11.9999 5.28214C15.4611 5.37365 15.4604 10.5149 11.9999 10.6072C8.53863 10.5149 8.53937 5.37587 11.9999 5.28214ZM15.1866 15.9066C14.7853 16.0091 14.3769 15.7667 14.2745 15.3653C14.274 15.3635 14.2736 15.3617 14.2731 15.3599C13.8892 14.1042 12.5601 13.3975 11.3044 13.7813C10.5486 14.0124 9.95694 14.604 9.72586 15.3599C9.62106 15.7608 9.21107 16.0009 8.81011 15.8961C8.40915 15.7913 8.16907 15.3813 8.27387 14.9804C8.85381 12.9224 10.9923 11.7241 13.0503 12.3041C14.3474 12.6696 15.3611 13.6833 15.7266 14.9804C15.831 15.385 15.5901 15.7981 15.1866 15.9066Z"
+                          fill="#1D1F2C"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_305_80753">
+                          <rect
+                            width="18"
+                            height="18"
+                            fill="white"
+                            transform="translate(3 3)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+
+                    <span class="w-100 d-flex justify-content-between align-items-center">Contact <i class="fa-solid fa-caret-down"></i></span>
+                    <!-- <i class="bi small bi-caret-down-fill"></i> -->
+                  </a>
+                  <ul class="submenu collapse">
+                    <li
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      data-bs-title="Client Page"
+                    >
+                      <a class="nav-link" href="client.html">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span>Client</span>
+                      </a>
+                    </li>
+                    <li
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      data-bs-title="Leads Page"
+                    >
+                      <a class="nav-link" href="leads.html">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <span>Leads </span>
+                      </a>
+                    </li>
+                    <li
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      data-bs-title="Team Member Page"
+                    >
+                      <a class="nav-link" href="team-member.html">
+                        <i class="fa-solid fa-users"></i>
+                        <span> Team Members</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="nav-item has-submenu active"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  data-bs-title="Finance Page"
+                >
+                  <a class="nav-link d-flex align-items-center gap-1" href="#">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_300_10936)">
+                        <path
+                          d="M17.25 6.00024H6.75C5.7558 6.00144 4.80267 6.39691 4.09966 7.09991C3.39666 7.80291 3.00119 8.75605 3 9.75024L3 14.2502C3.00119 15.2444 3.39666 16.1976 4.09966 16.9006C4.80267 17.6036 5.7558 17.9991 6.75 18.0002H17.25C18.2442 17.9991 19.1973 17.6036 19.9003 16.9006C20.6033 16.1976 20.9988 15.2444 21 14.2502V9.75024C20.9988 8.75605 20.6033 7.80291 19.9003 7.09991C19.1973 6.39691 18.2442 6.00144 17.25 6.00024ZM6 15.7502C5.85166 15.7502 5.70666 15.7063 5.58332 15.6238C5.45999 15.5414 5.36386 15.4243 5.30709 15.2873C5.25032 15.1502 5.23547 14.9994 5.26441 14.8539C5.29335 14.7084 5.36478 14.5748 5.46967 14.4699C5.57456 14.365 5.7082 14.2936 5.85368 14.2647C5.99917 14.2357 6.14997 14.2506 6.28701 14.3073C6.42406 14.3641 6.54119 14.4602 6.6236 14.5836C6.70601 14.7069 6.75 14.8519 6.75 15.0002C6.75 15.1992 6.67098 15.3899 6.53033 15.5306C6.38968 15.6712 6.19891 15.7502 6 15.7502ZM6 9.75024C5.85166 9.75024 5.70666 9.70626 5.58332 9.62385C5.45999 9.54144 5.36386 9.4243 5.30709 9.28726C5.25032 9.15021 5.23547 8.99941 5.26441 8.85393C5.29335 8.70844 5.36478 8.5748 5.46967 8.46991C5.57456 8.36502 5.7082 8.29359 5.85368 8.26466C5.99917 8.23572 6.14997 8.25057 6.28701 8.30733C6.42406 8.3641 6.54119 8.46023 6.6236 8.58357C6.70601 8.7069 6.75 8.85191 6.75 9.00024C6.75 9.19916 6.67098 9.38992 6.53033 9.53057C6.38968 9.67123 6.19891 9.75024 6 9.75024ZM12 15.0002C11.4067 15.0002 10.8266 14.8243 10.3333 14.4947C9.83994 14.165 9.45542 13.6965 9.22836 13.1483C9.0013 12.6001 8.94189 11.9969 9.05764 11.415C9.1734 10.833 9.45912 10.2985 9.87868 9.87892C10.2982 9.45937 10.8328 9.17364 11.4147 9.05789C11.9967 8.94213 12.5999 9.00154 13.1481 9.22861C13.6962 9.45567 14.1648 9.84019 14.4944 10.3335C14.8241 10.8269 15 11.4069 15 12.0002C15 12.7959 14.6839 13.559 14.1213 14.1216C13.5587 14.6842 12.7956 15.0002 12 15.0002ZM18 15.7502C17.8517 15.7502 17.7067 15.7063 17.5833 15.6238C17.46 15.5414 17.3639 15.4243 17.3071 15.2873C17.2503 15.1502 17.2355 14.9994 17.2644 14.8539C17.2934 14.7084 17.3648 14.5748 17.4697 14.4699C17.5746 14.365 17.7082 14.2936 17.8537 14.2647C17.9992 14.2357 18.15 14.2506 18.287 14.3073C18.4241 14.3641 18.5412 14.4602 18.6236 14.5836C18.706 14.7069 18.75 14.8519 18.75 15.0002C18.75 15.1992 18.671 15.3899 18.5303 15.5306C18.3897 15.6712 18.1989 15.7502 18 15.7502ZM18 9.75024C17.8517 9.75024 17.7067 9.70626 17.5833 9.62385C17.46 9.54144 17.3639 9.4243 17.3071 9.28726C17.2503 9.15021 17.2355 8.99941 17.2644 8.85393C17.2934 8.70844 17.3648 8.5748 17.4697 8.46991C17.5746 8.36502 17.7082 8.29359 17.8537 8.26466C17.9992 8.23572 18.15 8.25057 18.287 8.30733C18.4241 8.3641 18.5412 8.46023 18.6236 8.58357C18.706 8.7069 18.75 8.85191 18.75 9.00024C18.75 9.19916 18.671 9.38992 18.5303 9.53057C18.3897 9.67123 18.1989 9.75024 18 9.75024ZM13.5 12.0002C13.5 12.2969 13.412 12.5869 13.2472 12.8336C13.0824 13.0803 12.8481 13.2725 12.574 13.3861C12.2999 13.4996 11.9983 13.5293 11.7074 13.4714C11.4164 13.4135 11.1491 13.2707 10.9393 13.0609C10.7296 12.8511 10.5867 12.5839 10.5288 12.2929C10.4709 12.0019 10.5006 11.7003 10.6142 11.4262C10.7277 11.1521 10.92 10.9179 11.1666 10.753C11.4133 10.5882 11.7033 10.5002 12 10.5002C12.3978 10.5002 12.7794 10.6583 13.0607 10.9396C13.342 11.2209 13.5 11.6024 13.5 12.0002Z"
+                          fill="#1D1F2C"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_300_10936">
+                          <rect
+                            width="18"
+                            height="18"
+                            fill="white"
+                            transform="translate(3 3)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+
+                    <span class="w-100 d-flex justify-content-between align-items-center">Finance <i class="fa-solid fa-caret-down"></i></span>
+                    <!-- <i class="bi small bi-caret-down-fill"></i> -->
+                  </a>
+                  <ul class="submenu collapse">
+                    <li
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      data-bs-title="Transaction Page"
+                    >
+                      <a class="nav-link" href="transaction.html">
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+                        <span >Transaction</span>
+                      </a>
+                    </li>
+                    <li
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      data-bs-title="Wallet Page"
+                    >
+                      <a class="nav-link" href="wallet.html">
+                        <i class="fa-solid fa-wallet"></i>
+                        <span>Wallet</span>
+                      </a>
+                    </li>
+                    <li
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      data-bs-title="Statistic Page"
+                    >
+                      <a class="nav-link active" href="statistic.html">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <span>Statistic</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="nav-item"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  data-bs-title="File Manger Page"
+                >
+                  <a
+                    class="nav-link d-flex align-items-center gap-2"
+                    href="file-manger.html"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_295_5694)">
+                        <path
+                          d="M0 6.74294V13.4997C0.00249609 15.5697 1.67998 17.2472 3.75001 17.2497H14.25C16.32 17.2472 17.9975 15.5697 18 13.4997V6.65969L0 6.74294Z"
+                          fill="#1D1F2C"
+                        />
+                        <path
+                          d="M14.25 2.25001H9.35399C9.23801 2.25078 9.12336 2.22512 9.01874 2.17502L6.65174 0.987019C6.33927 0.831417 5.99505 0.750312 5.64599 0.750031H3.74998C1.67998 0.752491 0.00249609 2.42997 0 4.50001V5.24325L17.8972 5.16C17.5064 3.45966 15.9947 2.25349 14.25 2.25001Z"
+                          fill="#858D9D"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_295_5694">
+                          <rect width="18" height="18" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span>File Manager</span>
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  data-bs-title="Chat Page"
+                >
+                  <a
+                    class="nav-link d-flex align-items-center gap-1"
+                    href="chat.html"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_295_7991)">
+                        <path
+                          d="M18 3H6C5.20435 3 4.44129 3.31607 3.87868 3.87868C3.31607 4.44129 3 5.20435 3 6L3 15C3 15.7956 3.31607 16.5587 3.87868 17.1213C4.44129 17.6839 5.20435 18 6 18H8.175L11.5133 20.8223C11.6487 20.9369 11.8203 20.9997 11.9977 20.9997C12.1752 20.9997 12.3468 20.9369 12.4823 20.8223L15.825 18H18C18.7956 18 19.5587 17.6839 20.1213 17.1213C20.6839 16.5587 21 15.7956 21 15V6C21 5.20435 20.6839 4.44129 20.1213 3.87868C19.5587 3.31607 18.7956 3 18 3V3ZM8.25 6.75H12C12.1989 6.75 12.3897 6.82902 12.5303 6.96967C12.671 7.11032 12.75 7.30109 12.75 7.5C12.75 7.69891 12.671 7.88968 12.5303 8.03033C12.3897 8.17098 12.1989 8.25 12 8.25H8.25C8.05109 8.25 7.86032 8.17098 7.71967 8.03033C7.57902 7.88968 7.5 7.69891 7.5 7.5C7.5 7.30109 7.57902 7.11032 7.71967 6.96967C7.86032 6.82902 8.05109 6.75 8.25 6.75ZM15.75 14.25H8.25C8.05109 14.25 7.86032 14.171 7.71967 14.0303C7.57902 13.8897 7.5 13.6989 7.5 13.5C7.5 13.3011 7.57902 13.1103 7.71967 12.9697C7.86032 12.829 8.05109 12.75 8.25 12.75H15.75C15.9489 12.75 16.1397 12.829 16.2803 12.9697C16.421 13.1103 16.5 13.3011 16.5 13.5C16.5 13.6989 16.421 13.8897 16.2803 14.0303C16.1397 14.171 15.9489 14.25 15.75 14.25ZM15.75 11.25H8.25C8.05109 11.25 7.86032 11.171 7.71967 11.0303C7.57902 10.8897 7.5 10.6989 7.5 10.5C7.5 10.3011 7.57902 10.1103 7.71967 9.96967C7.86032 9.82902 8.05109 9.75 8.25 9.75H15.75C15.9489 9.75 16.1397 9.82902 16.2803 9.96967C16.421 10.1103 16.5 10.3011 16.5 10.5C16.5 10.6989 16.421 10.8897 16.2803 11.0303C16.1397 11.171 15.9489 11.25 15.75 11.25Z"
+                          fill="#1D1F2C"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_295_7991">
+                          <rect
+                            width="18"
+                            height="18"
+                            fill="white"
+                            transform="translate(3 3)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+
+                    <span>Chat</span>
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  data-bs-title="Calender Page"
+                >
+                  <a
+                    class="nav-link d-flex align-items-center gap-2"
+                    href="calender.html"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_295_9104)">
+                        <path
+                          d="M0 14.25C0.00119089 15.2442 0.396661 16.1973 1.09966 16.9003C1.80267 17.6033 2.7558 17.9988 3.75 18H14.25C15.2442 17.9988 16.1973 17.6033 16.9003 16.9003C17.6033 16.1973 17.9988 15.2442 18 14.25V7.5H0V14.25ZM12.75 10.875C12.9725 10.875 13.19 10.941 13.375 11.0646C13.56 11.1882 13.7042 11.3639 13.7894 11.5695C13.8745 11.775 13.8968 12.0012 13.8534 12.2195C13.81 12.4377 13.7028 12.6382 13.5455 12.7955C13.3882 12.9528 13.1877 13.06 12.9695 13.1034C12.7512 13.1468 12.525 13.1245 12.3195 13.0394C12.1139 12.9542 11.9382 12.81 11.8146 12.625C11.691 12.44 11.625 12.2225 11.625 12C11.625 11.7016 11.7435 11.4155 11.9545 11.2045C12.1655 10.9935 12.4516 10.875 12.75 10.875ZM9 10.875C9.2225 10.875 9.44001 10.941 9.62502 11.0646C9.81002 11.1882 9.95422 11.3639 10.0394 11.5695C10.1245 11.775 10.1468 12.0012 10.1034 12.2195C10.06 12.4377 9.95283 12.6382 9.7955 12.7955C9.63816 12.9528 9.43771 13.06 9.21948 13.1034C9.00125 13.1468 8.77505 13.1245 8.56948 13.0394C8.36391 12.9542 8.18821 12.81 8.0646 12.625C7.94098 12.44 7.875 12.2225 7.875 12C7.875 11.7016 7.99353 11.4155 8.2045 11.2045C8.41548 10.9935 8.70163 10.875 9 10.875ZM5.25 10.875C5.4725 10.875 5.69001 10.941 5.87502 11.0646C6.06002 11.1882 6.20422 11.3639 6.28936 11.5695C6.37451 11.775 6.39679 12.0012 6.35338 12.2195C6.30998 12.4377 6.20283 12.6382 6.0455 12.7955C5.88816 12.9528 5.68771 13.06 5.46948 13.1034C5.25125 13.1468 5.02505 13.1245 4.81948 13.0394C4.61391 12.9542 4.43821 12.81 4.3146 12.625C4.19098 12.44 4.125 12.2225 4.125 12C4.125 11.7016 4.24353 11.4155 4.4545 11.2045C4.66548 10.9935 4.95163 10.875 5.25 10.875Z"
+                          fill="#1D1F2C"
+                        />
+                        <path
+                          d="M14.25 1.5H13.5V0.75C13.5 0.551088 13.421 0.360322 13.2803 0.21967C13.1397 0.0790176 12.9489 0 12.75 0C12.5511 0 12.3603 0.0790176 12.2197 0.21967C12.079 0.360322 12 0.551088 12 0.75V1.5H6V0.75C6 0.551088 5.92098 0.360322 5.78033 0.21967C5.63968 0.0790176 5.44891 0 5.25 0C5.05109 0 4.86032 0.0790176 4.71967 0.21967C4.57902 0.360322 4.5 0.551088 4.5 0.75V1.5H3.75C2.7558 1.50119 1.80267 1.89666 1.09966 2.59966C0.396661 3.30267 0.00119089 4.2558 0 5.25L0 6H18V5.25C17.9988 4.2558 17.6033 3.30267 16.9003 2.59966C16.1973 1.89666 15.2442 1.50119 14.25 1.5Z"
+                          fill="#1D1F2C"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_295_9104">
+                          <rect width="18" height="18" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+
+                    <span>Calendar</span>
+                  </a>
+                </li>
+                <!--  -->
+                <li
+                  class="nav-item has-submenu d-block d-sm-block d-md-block d-lg-none"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  data-bs-title="languages"
+                >
+                  <a class="nav-link d-flex align-items-center gap-1" href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-world"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="#000000"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                      <path d="M3.6 9h16.8" />
+                      <path d="M3.6 15h16.8" />
+                      <path d="M11.5 3a17 17 0 0 0 0 18" />
+                      <path d="M12.5 3a17 17 0 0 1 0 18" />
+                    </svg>
+                    <span>Language </span>
+                    <!-- <i class="bi small bi-caret-down-fill"></i> -->
+                  </a>
+                  <ul class="submenu collapse">
+                    <li>
+                      <a class="nav-link" href="#">
+                        <svg
+                          width="28"
+                          height="28"
+                          viewBox="0 0 28 28"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                        >
+                          <rect
+                            width="28"
+                            height="28"
+                            rx="14"
+                            fill="url(#pattern0_637_13958)"
+                          />
+                          <defs>
+                            <pattern
+                              id="pattern0_637_13958"
+                              patternContentUnits="objectBoundingBox"
+                              width="1"
+                              height="1"
+                            >
+                              <use
+                                xlink:href="#image0_637_13958"
+                                transform="translate(0 -0.003125) scale(0.00625)"
+                              />
+                            </pattern>
+                            <image
+                              id="image0_637_13958"
+                              width="160"
+                              height="161"
+                              xlink:href="data:image/png;base64,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"
+                            />
+                          </defs>
+                        </svg>
+                        <span>English US</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#">
+                        <svg
+                          height="28px"
+                          width="28px"
+                          version="1.1"
+                          id="Capa_1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 473.68 473.68"
+                          xml:space="preserve"
+                        >
+                          <circle
+                            style="fill: #ffffff"
+                            cx="236.85"
+                            cy="236.849"
+                            r="236.83"
+                          />
+                          <path
+                            style="fill: #efecec"
+                            d="M460.143,157.873H314.218c6.339,50.593,6.376,106.339,0.123,156.995h146.113
+                            c8.53-24.438,13.219-50.682,13.219-78.026C473.677,209.139,468.879,182.573,460.143,157.873z"
+                          />
+                          <path
+                            style="fill: #429945"
+                            d="M314.218,157.873H460.14c-0.022-0.075-0.045-0.138-0.075-0.206
+                            C429.756,72.2,351.785,9.319,258.105,0.972C294.361,20.844,304.951,83.804,314.218,157.873z"
+                          />
+                          <path
+                            style="fill: #0b0b0b"
+                            d="M258.113,472.697c93.848-8.362,171.927-71.46,202.12-157.156c0.079-0.228,0.146-0.453,0.228-0.673
+                            H314.345C305.149,389.338,294.514,452.742,258.113,472.697z"
+                          />
+                          <path
+                            style="fill: #efefef"
+                            d="M0,236.841c0,27.348,4.697,53.588,13.219,78.026h313.313c6.26-50.66,6.215-106.402-0.116-156.995
+                            H13.534C4.798,182.573,0,209.139,0,236.841z"
+                          />
+                          <path
+                            style="fill: #49a948"
+                            d="M13.608,157.668c-0.022,0.067-0.045,0.131-0.075,0.206h312.883
+                            c-9.274-74.07-32.056-137.029-68.307-156.901c-7.012-0.621-14.102-0.972-21.274-0.972C133.806,0,46.191,65.801,13.608,157.668z"
+                          />
+                          <path
+                            style="fill: #151515"
+                            d="M326.532,314.867H13.219c0.079,0.221,0.153,0.445,0.228,0.673
+                            C45.9,407.642,133.641,473.676,236.835,473.676c7.173,0,14.263-0.352,21.274-0.98C294.514,452.742,317.336,389.338,326.532,314.867z
+                            "
+                          />
+                          <path
+                            style="fill: #e73b36"
+                            d="M0,236.841c0,98.586,60.263,183.086,145.952,218.735V18.099C60.263,53.741,0,138.241,0,236.841z"
+                          />
+                        </svg>
+                        <span>Arabic</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#">
+                        <svg
+                          width="28"
+                          height="28"
+                          viewBox="0 0 28 28"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                        >
+                          <rect
+                            width="28"
+                            height="28"
+                            rx="14"
+                            fill="url(#pattern0_637_13961)"
+                          />
+                          <defs>
+                            <pattern
+                              id="pattern0_637_13961"
+                              patternContentUnits="objectBoundingBox"
+                              width="1"
+                              height="1"
+                            >
+                              <use
+                                xlink:href="#image0_637_13961"
+                                transform="translate(0 -0.003125) scale(0.00625)"
+                              />
+                            </pattern>
+                            <image
+                              id="image0_637_13961"
+                              width="160"
+                              height="161"
+                              xlink:href="data:image/png;base64,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"
+                            />
+                          </defs>
+                        </svg>
+                        <span>English UK</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <!--  -->
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="col-md-10 overflow-hidden p-0 contain">
+          <div class="row">
+            <div class="col-md-12 layout-header">
+              <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid align-items-start">
+                  <button
+                    class="btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                  >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+
+                  <ul
+                    class="content-nav-bar d-flex justify-content-end gap-3 pt-2 mb-2 mb-lg-0"
+                  >
+                    <li class="nav-item d-none d-sm-none d-md-none d-lg-block">
+                      <span class="datepicker-toggle">
+                        <span class="datepicker-toggle-button"></span>
+                        <input type="date" class="datepicker-input" />
+                      </span>
+                    </li>
+                    <li class="nav-item position-relative">
+                      <button
+                        type="button"
+                        class="border-0"
+                        type="button"
+                        id="defaultDropdown"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        data-bs-offset="10,200"
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_49_10686)">
+                            <path
+                              d="M17.9655 4.15637L11.652 10.4699C10.948 11.1721 9.99431 11.5664 9 11.5664C8.00569 11.5664 7.05197 11.1721 6.348 10.4699L0.0345 4.15637C0.024 4.27487 0 4.38212 0 4.49987V13.4999C0.00119089 14.4941 0.396661 15.4472 1.09966 16.1502C1.80267 16.8532 2.7558 17.2487 3.75 17.2499H14.25C15.2442 17.2487 16.1973 16.8532 16.9003 16.1502C17.6033 15.4472 17.9988 14.4941 18 13.4999V4.49987C18 4.38212 17.976 4.27487 17.9655 4.15637Z"
+                              fill="#858D9D"
+                            />
+                            <path
+                              d="M10.5915 9.40938L17.442 2.55813C17.1101 2.00787 16.6421 1.55241 16.083 1.23568C15.5239 0.918945 14.8926 0.751633 14.25 0.749878H3.74998C3.1074 0.751633 2.47611 0.918945 1.917 1.23568C1.3579 1.55241 0.889842 2.00787 0.557983 2.55813L7.40848 9.40938C7.83116 9.83036 8.40342 10.0667 8.99998 10.0667C9.59655 10.0667 10.1688 9.83036 10.5915 9.40938Z"
+                              fill="#858D9D"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_49_10686">
+                              <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <div class="badge">
+                          <span>5</span>
+                        </div>
+                      </button>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="defaultDropdown"
+                      >
+                        <li>
+                          <a class="dropdown-item" href="#">Chat</a>
+                          <span class="num-item"> 99+ </span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Discussion</a>
+                          <span class="num-item"> 99+ </span>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Reviews</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Support</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item position-relative">
+                      <button
+                        type="button"
+                        class="border-0"
+                        type="button"
+                        id="defaultDropdown"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        data-bs-offset="10,200"
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_49_10693)">
+                            <path
+                              d="M5.56799 15.75C5.85874 16.4185 6.33841 16.9876 6.94811 17.3873C7.5578 17.787 8.27096 18 8.99999 18C9.72903 18 10.4422 17.787 11.0519 17.3873C11.6616 16.9876 12.1412 16.4185 12.432 15.75H5.56799Z"
+                              fill="#858D9D"
+                            />
+                            <path
+                              d="M16.7941 9.41176L15.4921 5.11951C15.0752 3.61827 14.1686 2.29934 12.9165 1.37213C11.6644 0.44493 10.1384 -0.0374034 8.58079 0.00171693C7.02321 0.0408372 5.52334 0.599169 4.31933 1.58806C3.11531 2.57696 2.27616 3.93973 1.9351 5.46001L0.9241 9.61276C0.789725 10.1646 0.782445 10.7397 0.902808 11.2947C1.02317 11.8498 1.26803 12.3702 1.61892 12.8168C1.9698 13.2634 2.41754 13.6245 2.92834 13.8727C3.43914 14.121 3.99966 14.25 4.5676 14.25H13.2053C13.7909 14.25 14.3683 14.1129 14.8914 13.8497C15.4144 13.5864 15.8685 13.2044 16.2174 12.7341C16.5662 12.2638 16.8001 11.7183 16.9002 11.1414C17.0004 10.5645 16.964 9.97211 16.7941 9.41176Z"
+                              fill="#858D9D"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_49_10693">
+                              <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <div class="badge">
+                          <span>3</span>
+                        </div>
+                      </button>
+                      <ul
+                        class="dropdown-menu notifications"
+                        aria-labelledby="defaultDropdown"
+                      >
+                        <li
+                          class="px-4 d-flex align-items-baseline justify-content-between"
+                        >
+                          <p class="header-text">Notification</p>
+                          <i class="fa-solid fa-gear"></i>
+                        </li>
+                        <li class="notread-notification">
+                          <a class="dropdown-item" href="#">
+                            <div class="mb-2 d-flex gap-3">
+                              <span class="noti-order">
+                                <svg
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 14 14"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g clip-path="url(#clip0_77_10861)">
+                                    <path
+                                      d="M13.2493 2.37825C13.0852 2.18134 12.8797 2.02297 12.6476 1.91439C12.4154 1.80581 12.1621 1.74969 11.9058 1.75H2.4745L2.45 1.54525C2.39986 1.11966 2.19531 0.72726 1.87512 0.442445C1.55493 0.15763 1.14137 0.00019938 0.712833 0L0.583333 0C0.428624 0 0.280251 0.0614582 0.170854 0.170854C0.0614582 0.280251 0 0.428624 0 0.583333C0 0.738043 0.0614582 0.886416 0.170854 0.995812C0.280251 1.10521 0.428624 1.16667 0.583333 1.16667H0.712833C0.855711 1.16669 0.993613 1.21914 1.10038 1.31408C1.20715 1.40903 1.27537 1.53985 1.29208 1.68175L2.09475 8.50675C2.17808 9.21654 2.51911 9.87104 3.05311 10.346C3.58711 10.821 4.27692 11.0833 4.99158 11.0833H11.0833C11.238 11.0833 11.3864 11.0219 11.4958 10.9125C11.6052 10.8031 11.6667 10.6547 11.6667 10.5C11.6667 10.3453 11.6052 10.1969 11.4958 10.0875C11.3864 9.97812 11.238 9.91667 11.0833 9.91667H4.99158C4.63053 9.91565 4.27863 9.80299 3.98413 9.59412C3.68962 9.38525 3.46693 9.0904 3.34658 8.75H10.2999C10.9838 8.75004 11.6459 8.5098 12.1706 8.07125C12.6953 7.63271 13.0492 7.02374 13.1705 6.35075L13.6284 3.81092C13.6741 3.55892 13.6639 3.29996 13.5983 3.05237C13.5328 2.80479 13.4136 2.57464 13.2493 2.37825Z"
+                                      fill="#858D9D"
+                                    />
+                                    <path
+                                      d="M4.08329 14.0003C4.72762 14.0003 5.24995 13.478 5.24995 12.8337C5.24995 12.1893 4.72762 11.667 4.08329 11.667C3.43896 11.667 2.91663 12.1893 2.91663 12.8337C2.91663 13.478 3.43896 14.0003 4.08329 14.0003Z"
+                                      fill="#858D9D"
+                                    />
+                                    <path
+                                      d="M9.91666 14.0003C10.561 14.0003 11.0833 13.478 11.0833 12.8337C11.0833 12.1893 10.561 11.667 9.91666 11.667C9.27233 11.667 8.75 12.1893 8.75 12.8337C8.75 13.478 9.27233 14.0003 9.91666 14.0003Z"
+                                      fill="#858D9D"
+                                    />
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_77_10861">
+                                      <rect
+                                        width="14"
+                                        height="14"
+                                        fill="white"
+                                      />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                                orders
+                              </span>
+                              <span class="noti-time">
+                                <svg
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 14 14"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32122C0.003033 5.6003 -0.13559 7.00777 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73785 14 8.38447 14 7C13.998 5.1441 13.2599 3.36479 11.9475 2.05247C10.6352 0.74015 8.8559 0.0020073 7 0V0ZM7.58334 6.92942C7.5834 7.0283 7.55832 7.12557 7.51047 7.2121C7.46261 7.29863 7.39354 7.37158 7.30975 7.42408L5.06975 8.82408C5.00464 8.86476 4.93215 8.89221 4.85643 8.90488C4.7807 8.91754 4.70323 8.91516 4.62842 8.89788C4.55362 8.8806 4.48295 8.84876 4.42045 8.80417C4.35795 8.75958 4.30485 8.70311 4.26417 8.638C4.22349 8.57289 4.19604 8.5004 4.18338 8.42467C4.17071 8.34895 4.17309 8.27147 4.19037 8.19667C4.20765 8.12186 4.23949 8.0512 4.28408 7.9887C4.32867 7.9262 4.38514 7.87309 4.45025 7.83242L6.41667 6.60625V4.08333C6.41667 3.92862 6.47813 3.78025 6.58752 3.67085C6.69692 3.56146 6.84529 3.5 7 3.5C7.15471 3.5 7.30309 3.56146 7.41248 3.67085C7.52188 3.78025 7.58334 3.92862 7.58334 4.08333V6.92942Z"
+                                    fill="#858D9D"
+                                  />
+                                </svg>
+                                1 min ago
+                              </span>
+                            </div>
+                            <div class="new-order mb-1">
+                              <h5>New Order #30854</h5>
+                              <p class="m-0">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Phasellus finibus vestibulum
+                                hendrerit. Nulla est diam, efficitur eu
+                                ullamcorper quis, ultrices nec nisl.
+                              </p>
+                            </div>
+                            <div
+                              class="mark-asread d-flex align-items-center justify-content-end"
+                            >
+                              <button class="border-0" type="button">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Mark as Read</span>
+                              </button>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <div class="mb-2 d-flex gap-3">
+                              <span class="noti-order">
+                                <svg
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 14 14"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g clip-path="url(#clip0_77_10861)">
+                                    <path
+                                      d="M13.2493 2.37825C13.0852 2.18134 12.8797 2.02297 12.6476 1.91439C12.4154 1.80581 12.1621 1.74969 11.9058 1.75H2.4745L2.45 1.54525C2.39986 1.11966 2.19531 0.72726 1.87512 0.442445C1.55493 0.15763 1.14137 0.00019938 0.712833 0L0.583333 0C0.428624 0 0.280251 0.0614582 0.170854 0.170854C0.0614582 0.280251 0 0.428624 0 0.583333C0 0.738043 0.0614582 0.886416 0.170854 0.995812C0.280251 1.10521 0.428624 1.16667 0.583333 1.16667H0.712833C0.855711 1.16669 0.993613 1.21914 1.10038 1.31408C1.20715 1.40903 1.27537 1.53985 1.29208 1.68175L2.09475 8.50675C2.17808 9.21654 2.51911 9.87104 3.05311 10.346C3.58711 10.821 4.27692 11.0833 4.99158 11.0833H11.0833C11.238 11.0833 11.3864 11.0219 11.4958 10.9125C11.6052 10.8031 11.6667 10.6547 11.6667 10.5C11.6667 10.3453 11.6052 10.1969 11.4958 10.0875C11.3864 9.97812 11.238 9.91667 11.0833 9.91667H4.99158C4.63053 9.91565 4.27863 9.80299 3.98413 9.59412C3.68962 9.38525 3.46693 9.0904 3.34658 8.75H10.2999C10.9838 8.75004 11.6459 8.5098 12.1706 8.07125C12.6953 7.63271 13.0492 7.02374 13.1705 6.35075L13.6284 3.81092C13.6741 3.55892 13.6639 3.29996 13.5983 3.05237C13.5328 2.80479 13.4136 2.57464 13.2493 2.37825Z"
+                                      fill="#858D9D"
+                                    />
+                                    <path
+                                      d="M4.08329 14.0003C4.72762 14.0003 5.24995 13.478 5.24995 12.8337C5.24995 12.1893 4.72762 11.667 4.08329 11.667C3.43896 11.667 2.91663 12.1893 2.91663 12.8337C2.91663 13.478 3.43896 14.0003 4.08329 14.0003Z"
+                                      fill="#858D9D"
+                                    />
+                                    <path
+                                      d="M9.91666 14.0003C10.561 14.0003 11.0833 13.478 11.0833 12.8337C11.0833 12.1893 10.561 11.667 9.91666 11.667C9.27233 11.667 8.75 12.1893 8.75 12.8337C8.75 13.478 9.27233 14.0003 9.91666 14.0003Z"
+                                      fill="#858D9D"
+                                    />
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_77_10861">
+                                      <rect
+                                        width="14"
+                                        height="14"
+                                        fill="white"
+                                      />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                                orders
+                              </span>
+                              <span class="noti-time">
+                                <svg
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 14 14"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32122C0.003033 5.6003 -0.13559 7.00777 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73785 14 8.38447 14 7C13.998 5.1441 13.2599 3.36479 11.9475 2.05247C10.6352 0.74015 8.8559 0.0020073 7 0V0ZM7.58334 6.92942C7.5834 7.0283 7.55832 7.12557 7.51047 7.2121C7.46261 7.29863 7.39354 7.37158 7.30975 7.42408L5.06975 8.82408C5.00464 8.86476 4.93215 8.89221 4.85643 8.90488C4.7807 8.91754 4.70323 8.91516 4.62842 8.89788C4.55362 8.8806 4.48295 8.84876 4.42045 8.80417C4.35795 8.75958 4.30485 8.70311 4.26417 8.638C4.22349 8.57289 4.19604 8.5004 4.18338 8.42467C4.17071 8.34895 4.17309 8.27147 4.19037 8.19667C4.20765 8.12186 4.23949 8.0512 4.28408 7.9887C4.32867 7.9262 4.38514 7.87309 4.45025 7.83242L6.41667 6.60625V4.08333C6.41667 3.92862 6.47813 3.78025 6.58752 3.67085C6.69692 3.56146 6.84529 3.5 7 3.5C7.15471 3.5 7.30309 3.56146 7.41248 3.67085C7.52188 3.78025 7.58334 3.92862 7.58334 4.08333V6.92942Z"
+                                    fill="#858D9D"
+                                  />
+                                </svg>
+                                1 min ago
+                              </span>
+                            </div>
+                            <div class="new-order mb-1">
+                              <h5>New Order #30854</h5>
+                              <p class="m-0">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Phasellus finibus vestibulum
+                                hendrerit. Nulla est diam, efficitur eu
+                                ullamcorper quis, ultrices nec nisl.
+                              </p>
+                            </div>
+                            <div
+                              class="mark-asread d-flex align-items-center justify-content-end"
+                            >
+                              <button class="border-0" type="button">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Mark as Read</span>
+                              </button>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <div class="mb-2 d-flex gap-3">
+                              <span class="noti-order">
+                                <svg
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 14 14"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g clip-path="url(#clip0_77_10861)">
+                                    <path
+                                      d="M13.2493 2.37825C13.0852 2.18134 12.8797 2.02297 12.6476 1.91439C12.4154 1.80581 12.1621 1.74969 11.9058 1.75H2.4745L2.45 1.54525C2.39986 1.11966 2.19531 0.72726 1.87512 0.442445C1.55493 0.15763 1.14137 0.00019938 0.712833 0L0.583333 0C0.428624 0 0.280251 0.0614582 0.170854 0.170854C0.0614582 0.280251 0 0.428624 0 0.583333C0 0.738043 0.0614582 0.886416 0.170854 0.995812C0.280251 1.10521 0.428624 1.16667 0.583333 1.16667H0.712833C0.855711 1.16669 0.993613 1.21914 1.10038 1.31408C1.20715 1.40903 1.27537 1.53985 1.29208 1.68175L2.09475 8.50675C2.17808 9.21654 2.51911 9.87104 3.05311 10.346C3.58711 10.821 4.27692 11.0833 4.99158 11.0833H11.0833C11.238 11.0833 11.3864 11.0219 11.4958 10.9125C11.6052 10.8031 11.6667 10.6547 11.6667 10.5C11.6667 10.3453 11.6052 10.1969 11.4958 10.0875C11.3864 9.97812 11.238 9.91667 11.0833 9.91667H4.99158C4.63053 9.91565 4.27863 9.80299 3.98413 9.59412C3.68962 9.38525 3.46693 9.0904 3.34658 8.75H10.2999C10.9838 8.75004 11.6459 8.5098 12.1706 8.07125C12.6953 7.63271 13.0492 7.02374 13.1705 6.35075L13.6284 3.81092C13.6741 3.55892 13.6639 3.29996 13.5983 3.05237C13.5328 2.80479 13.4136 2.57464 13.2493 2.37825Z"
+                                      fill="#858D9D"
+                                    />
+                                    <path
+                                      d="M4.08329 14.0003C4.72762 14.0003 5.24995 13.478 5.24995 12.8337C5.24995 12.1893 4.72762 11.667 4.08329 11.667C3.43896 11.667 2.91663 12.1893 2.91663 12.8337C2.91663 13.478 3.43896 14.0003 4.08329 14.0003Z"
+                                      fill="#858D9D"
+                                    />
+                                    <path
+                                      d="M9.91666 14.0003C10.561 14.0003 11.0833 13.478 11.0833 12.8337C11.0833 12.1893 10.561 11.667 9.91666 11.667C9.27233 11.667 8.75 12.1893 8.75 12.8337C8.75 13.478 9.27233 14.0003 9.91666 14.0003Z"
+                                      fill="#858D9D"
+                                    />
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_77_10861">
+                                      <rect
+                                        width="14"
+                                        height="14"
+                                        fill="white"
+                                      />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                                orders
+                              </span>
+                              <span class="noti-time">
+                                <svg
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 14 14"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32122C0.003033 5.6003 -0.13559 7.00777 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73785 14 8.38447 14 7C13.998 5.1441 13.2599 3.36479 11.9475 2.05247C10.6352 0.74015 8.8559 0.0020073 7 0V0ZM7.58334 6.92942C7.5834 7.0283 7.55832 7.12557 7.51047 7.2121C7.46261 7.29863 7.39354 7.37158 7.30975 7.42408L5.06975 8.82408C5.00464 8.86476 4.93215 8.89221 4.85643 8.90488C4.7807 8.91754 4.70323 8.91516 4.62842 8.89788C4.55362 8.8806 4.48295 8.84876 4.42045 8.80417C4.35795 8.75958 4.30485 8.70311 4.26417 8.638C4.22349 8.57289 4.19604 8.5004 4.18338 8.42467C4.17071 8.34895 4.17309 8.27147 4.19037 8.19667C4.20765 8.12186 4.23949 8.0512 4.28408 7.9887C4.32867 7.9262 4.38514 7.87309 4.45025 7.83242L6.41667 6.60625V4.08333C6.41667 3.92862 6.47813 3.78025 6.58752 3.67085C6.69692 3.56146 6.84529 3.5 7 3.5C7.15471 3.5 7.30309 3.56146 7.41248 3.67085C7.52188 3.78025 7.58334 3.92862 7.58334 4.08333V6.92942Z"
+                                    fill="#858D9D"
+                                  />
+                                </svg>
+                                1 min ago
+                              </span>
+                            </div>
+                            <div class="new-order mb-1">
+                              <h5>New Order #30854</h5>
+                              <p class="m-0">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Phasellus finibus vestibulum
+                                hendrerit. Nulla est diam, efficitur eu
+                                ullamcorper quis, ultrices nec nisl.
+                              </p>
+                            </div>
+                            <div
+                              class="mark-asread d-flex align-items-center justify-content-end"
+                            >
+                              <button class="border-0" type="button">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Mark as Read</span>
+                              </button>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="noti-footer px-4 py-3 border-top-1">
+                          <button class="mark-all border-0">
+                            <i class="fa-solid fa-list-check"></i>
+                            <span>Mark All as Read</span>
+                          </button>
+
+                          <div class="see-more">
+                            <a href=""
+                              >See More
+                              <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li
+                      class="nav-item position-relative d-none d-sm-none d-md-none d-lg-block"
+                    >
+                      <button
+                        type="button"
+                        class="border-0"
+                        type="button"
+                        id="defaultDropdownLang"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        data-bs-offset="10,200"
+                      >
+                        <svg
+                          width="28"
+                          height="28"
+                          viewBox="0 0 28 28"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                        >
+                          <rect
+                            width="28"
+                            height="28"
+                            rx="14"
+                            fill="url(#pattern0)"
+                          />
+                          <defs>
+                            <pattern
+                              id="pattern0"
+                              patternContentUnits="objectBoundingBox"
+                              width="1"
+                              height="1"
+                            >
+                              <use
+                                xlink:href="#image0_49_13944"
+                                transform="translate(0 -0.003125) scale(0.00625)"
+                              />
+                            </pattern>
+                            <image
+                              id="image0_49_13944"
+                              width="160"
+                              height="161"
+                              xlink:href="data:image/png;base64,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"
+                            />
+                          </defs>
+                        </svg>
+                      </button>
+                      <ul
+                        class="dropdown-menu py-3"
+                        aria-labelledby="defaultDropdownLang"
+                      >
+                        <li class="d-block p-2 my-1">
+                          <a class="dropdown-item d-inline" href="#">
+                            <svg
+                              width="28"
+                              height="28"
+                              viewBox="0 0 28 28"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
+                              <rect
+                                width="28"
+                                height="28"
+                                rx="14"
+                                fill="url(#pattern0)"
+                              />
+                              <defs>
+                                <pattern
+                                  id="pattern0"
+                                  patternContentUnits="objectBoundingBox"
+                                  width="1"
+                                  height="1"
+                                >
+                                  <use
+                                    xlink:href="#image0_49_13944"
+                                    transform="translate(0 -0.003125) scale(0.00625)"
+                                  />
+                                </pattern>
+                                <image
+                                  id="image0_49_13944"
+                                  width="160"
+                                  height="161"
+                                  xlink:href="data:image/png;base64,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"
+                                />
+                              </defs>
+                            </svg>
+                            <span class="mx-2"> English US </span>
+                          </a>
+                        </li>
+                        <li class="d-block p-2 my-1">
+                          <a class="dropdown-item" href="#">
+                            <svg
+                              width="28"
+                              height="28"
+                              viewBox="0 0 28 28"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
+                              <rect
+                                width="28"
+                                height="28"
+                                rx="14"
+                                fill="url(#pattern0_77_13961)"
+                              />
+                              <defs>
+                                <pattern
+                                  id="pattern0_77_13961"
+                                  patternContentUnits="objectBoundingBox"
+                                  width="1"
+                                  height="1"
+                                >
+                                  <use
+                                    xlink:href="#image0_77_13961"
+                                    transform="translate(0 -0.003125) scale(0.00625)"
+                                  />
+                                </pattern>
+                                <image
+                                  id="image0_77_13961"
+                                  width="160"
+                                  height="161"
+                                  xlink:href="data:image/png;base64,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"
+                                />
+                              </defs>
+                            </svg>
+                            <span class=""> English UK </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li
+                      type="button"
+                      data-bs-offset="10,20"
+                      data-bs-toggle="dropdown"
+                      data-bs-display="static"
+                      aria-expanded="false"
+                      class="nav-item user px-3 position-relative d-flex gap-3"
+                    >
+                      <img src="./img/2eaUdji4L5CmXZ7GD0ZNUC1sFjB.svg" alt="" />
+                      <div class="user-info d-none d-sm-none d-md-block">
+                        <h6 class="mb-0">Jay Hargudson</h6>
+                        <p>Manager</p>
+                      </div>
+                      <svg
+                        class=""
+                        width="10"
+                        height="7"
+                        viewBox="0 0 10 7"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0.810631 0.75H9.18963C9.33794 0.750032 9.48292 0.794035 9.60623 0.876448C9.72953 0.958861 9.82564 1.07598 9.88239 1.21301C9.93914 1.35003 9.95399 1.50081 9.92507 1.64627C9.89614 1.79174 9.82474 1.92536 9.71988 2.03025L5.53038 6.21974C5.38974 6.36034 5.199 6.43933 5.00013 6.43933C4.80126 6.43933 4.61053 6.36034 4.46988 6.21974L0.280381 2.03025C0.175524 1.92536 0.104119 1.79174 0.0751936 1.64627C0.0462679 1.50081 0.0611204 1.35003 0.117873 1.21301C0.174625 1.07598 0.27073 0.958861 0.394037 0.876448C0.517345 0.794035 0.662319 0.750032 0.810631 0.75Z"
+                          fill="#858D9D"
+                        />
+                      </svg>
+                    </li>
+                    <ul
+                      class="dropdown-menu user-dropdown dropdown-menu-lg-end"
+                    >
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="#">Setting</a></li>
+                      <li
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <a class="dropdown-item" href="#"> Sign Out </a>
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_77_5942)">
+                            <path
+                              d="M8.607 11.25C8.40809 11.25 8.21732 11.329 8.07667 11.4697C7.93602 11.6103 7.857 11.8011 7.857 12V14.25C7.857 14.8467 7.61995 15.419 7.19799 15.841C6.77603 16.2629 6.20374 16.5 5.607 16.5H3.75C3.15326 16.5 2.58097 16.2629 2.15901 15.841C1.73705 15.419 1.5 14.8467 1.5 14.25V3.75C1.5 3.15326 1.73705 2.58097 2.15901 2.15901C2.58097 1.73705 3.15326 1.5 3.75 1.5H5.607C6.20374 1.5 6.77603 1.73705 7.19799 2.15901C7.61995 2.58097 7.857 3.15326 7.857 3.75V6C7.857 6.19891 7.93602 6.38968 8.07667 6.53033C8.21732 6.67098 8.40809 6.75 8.607 6.75C8.80591 6.75 8.99668 6.67098 9.13733 6.53033C9.27798 6.38968 9.357 6.19891 9.357 6V3.75C9.35581 2.7558 8.96034 1.80267 8.25734 1.09966C7.55433 0.396661 6.6012 0.00119089 5.607 0H3.75C2.7558 0.00119089 1.80267 0.396661 1.09967 1.09966C0.396662 1.80267 0.00119089 2.7558 0 3.75L0 14.25C0.00119089 15.2442 0.396662 16.1973 1.09967 16.9003C1.80267 17.6033 2.7558 17.9988 3.75 18H5.607C6.6012 17.9988 7.55433 17.6033 8.25734 16.9003C8.96034 16.1973 9.35581 15.2442 9.357 14.25V12C9.357 11.8011 9.27798 11.6103 9.13733 11.4697C8.99668 11.329 8.80591 11.25 8.607 11.25Z"
+                              fill="#EB3D4D"
+                            />
+                            <path
+                              d="M17.1503 7.40943L13.7108 3.96993C13.6416 3.8983 13.5588 3.84116 13.4673 3.80186C13.3758 3.76255 13.2774 3.74186 13.1778 3.741C13.0782 3.74013 12.9795 3.75911 12.8873 3.79682C12.7951 3.83453 12.7114 3.89022 12.641 3.96064C12.5705 4.03106 12.5148 4.1148 12.4771 4.20697C12.4394 4.29914 12.4204 4.3979 12.4213 4.49748C12.4222 4.59707 12.4429 4.69548 12.4822 4.78699C12.5215 4.87849 12.5786 4.96125 12.6503 5.03043L15.8468 8.22768L4.5 8.25018C4.30109 8.25018 4.11032 8.3292 3.96967 8.46985C3.82902 8.61051 3.75 8.80127 3.75 9.00018C3.75 9.1991 3.82902 9.38986 3.96967 9.53051C4.11032 9.67117 4.30109 9.75018 4.5 9.75018L15.891 9.72693L12.6488 12.9699C12.5771 13.0391 12.52 13.1219 12.4807 13.2134C12.4414 13.3049 12.4207 13.4033 12.4198 13.5029C12.4189 13.6025 12.4379 13.7012 12.4756 13.7934C12.5133 13.8856 12.569 13.9693 12.6395 14.0397C12.7099 14.1101 12.7936 14.1658 12.8858 14.2036C12.978 14.2413 13.0767 14.2602 13.1763 14.2594C13.2759 14.2585 13.3743 14.2378 13.4658 14.1985C13.5573 14.1592 13.6401 14.1021 13.7093 14.0304L17.1488 10.5909C17.5708 10.1692 17.808 9.59711 17.8083 9.00049C17.8086 8.40387 17.5719 7.83157 17.1503 7.40943Z"
+                              fill="#EB3D4D"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_77_5942">
+                              <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </li>
+                    </ul>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <div class="row header-title">
+            <div class="col-md-12 mb-1">
+              <h3>Statistic</h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Statictic
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <div class="col-md-6 d-flex justify-content-start">
+              <div
+                class="btn-group filter-data bg-white p-1"
+                role="group"
+                aria-label="Basic radio toggle  button group"
+              >
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="alldate"
+                  autocomplete="off"
+                  checked
+                />
+                <label class="btn" for="alldate">All Date</label>
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="month_12"
+                  autocomplete="off"
+                />
+                <label class="btn" for="month_12">12 Months</label>
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="day_30"
+                  autocomplete="off"
+                />
+                <label class="btn" for="day_30"> 30 Days </label>
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="day_7"
+                  autocomplete="off"
+                />
+                <label class="btn" for="day_7"> 7 Days </label>
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="hours_24"
+                  autocomplete="off"
+                />
+                <label class="btn" for="hours_24">24 Hour</label>
+              </div>
+            </div>
+          </div>
+          <div class="row cards my-3">
+            <div class="col-md-6 balance-statistic">
+              <div class="card overflow-hidden p-3 rounded-3 bg-white">
+                <div class="card-header border-0 rounded-3 bg-white">
+                  <h4>Balance Statistic</h4>
+                  <p>Your Balance Statistic</p>
+                </div>
+                <div class="card-body d-flex gap-2 py-0">
+                  <span>
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        width="40"
+                        height="40"
+                        rx="20"
+                        fill="url(#paint0_linear_567_33556)"
+                      />
+                      <g clip-path="url(#clip0_567_33556)">
+                        <path
+                          d="M21.4491 14C22.0592 14.0006 22.6441 14.2432 23.0755 14.6746C23.5069 15.106 23.7495 15.6909 23.7501 16.301C23.7501 16.4999 23.8291 16.6907 23.9698 16.8313C24.1104 16.972 24.3012 17.051 24.5001 17.051C24.699 17.051 24.8898 16.972 25.0305 16.8313C25.1711 16.6907 25.2501 16.4999 25.2501 16.301V16.25C25.2501 16.2358 25.2501 16.223 25.2501 16.2088C25.2251 15.217 24.8137 14.2743 24.1037 13.5815C23.3937 12.8887 22.4411 12.5007 21.4491 12.5H20.7501V11.75C20.7501 11.5511 20.6711 11.3603 20.5305 11.2197C20.3898 11.079 20.199 11 20.0001 11C19.8012 11 19.6104 11.079 19.4698 11.2197C19.3291 11.3603 19.2501 11.5511 19.2501 11.75V12.5H18.5511C17.6491 12.501 16.7768 12.8227 16.0902 13.4076C15.4036 13.9926 14.9474 14.8027 14.8031 15.6931C14.6588 16.5835 14.8359 17.4962 15.3027 18.268C15.7695 19.0398 16.4956 19.6205 17.3511 19.9062L19.2501 20.54V26H18.5511C17.941 25.9994 17.3561 25.7568 16.9247 25.3254C16.4933 24.894 16.2507 24.3091 16.2501 23.699C16.2501 23.5001 16.1711 23.3093 16.0305 23.1687C15.8898 23.028 15.699 22.949 15.5001 22.949C15.3012 22.949 15.1104 23.028 14.9698 23.1687C14.8291 23.3093 14.7501 23.5001 14.7501 23.699V23.75C14.7501 23.7642 14.7501 23.777 14.7501 23.7913C14.7752 24.783 15.1865 25.7257 15.8965 26.4185C16.6066 27.1113 17.5591 27.4993 18.5511 27.5H19.2501V28.25C19.2501 28.4489 19.3291 28.6397 19.4698 28.7803C19.6104 28.921 19.8012 29 20.0001 29C20.199 29 20.3898 28.921 20.5305 28.7803C20.6711 28.6397 20.7501 28.4489 20.7501 28.25V27.5H21.4491C22.3511 27.499 23.2234 27.1773 23.91 26.5924C24.5966 26.0074 25.0529 25.1973 25.1971 24.3069C25.3414 23.4165 25.1643 22.5038 24.6975 21.732C24.2307 20.9602 23.5047 20.3795 22.6491 20.0938L20.7501 19.46V14H21.4491ZM22.1766 21.5157C22.6952 21.6883 23.1354 22.0399 23.4184 22.5074C23.7014 22.975 23.8088 23.528 23.7213 24.0675C23.6338 24.607 23.3571 25.0977 22.9407 25.4518C22.5244 25.8059 21.9957 26.0002 21.4491 26H20.7501V21.0402L22.1766 21.5157ZM19.2501 18.9598L17.8251 18.4843C17.3067 18.3117 16.8666 17.9603 16.5835 17.4929C16.3005 17.0255 16.193 16.4726 16.2803 15.9333C16.3677 15.3939 16.6441 14.9032 17.0601 14.549C17.4762 14.1947 18.0047 14.0002 18.5511 14H19.2501V18.9598Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <linearGradient
+                          id="paint0_linear_567_33556"
+                          x1="20"
+                          y1="0"
+                          x2="20"
+                          y2="40"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#2BB2FE" />
+                          <stop offset="1" stop-color="#22CAAD" />
+                        </linearGradient>
+                        <clipPath id="clip0_567_33556">
+                          <rect
+                            width="18"
+                            height="18"
+                            fill="white"
+                            transform="translate(11 11)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <div>
+                    <span>Balance</span>
+                    <p>
+                      <i class="fa-solid fa-dollar-sign"></i> 26,201
+                      <span>10%<i class="fa-solid fa-caret-up"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div id="statistic-chart"></div>
+              </div>
+            </div>
+            <div class="col-md-6 balance-statistic">
+              <div class="card overflow-hidden p-3 rounded-3 bg-white">
+                <div class="card-header border-0 rounded-3 bg-white">
+                  <h4>Statistic</h4>
+                  <p>Income and Expenses</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card-body d-flex gap-2 py-0">
+                      <span>
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="40" rx="20" fill="url(#paint0_linear_567_33076)"/>
+                            <g clip-path="url(#clip0_567_33076)">
+                            <path d="M25.25 14H14.75C13.7558 14.0012 12.8027 14.3967 12.0997 15.0997C11.3967 15.8027 11.0012 16.7558 11 17.75V22.25C11.0012 23.2442 11.3967 24.1973 12.0997 24.9003C12.8027 25.6033 13.7558 25.9988 14.75 26H25.25C26.2442 25.9988 27.1973 25.6033 27.9003 24.9003C28.6033 24.1973 28.9988 23.2442 29 22.25V17.75C28.9988 16.7558 28.6033 15.8027 27.9003 15.0997C27.1973 14.3967 26.2442 14.0012 25.25 14ZM14 23.75C13.8517 23.75 13.7067 23.706 13.5833 23.6236C13.46 23.5412 13.3639 23.4241 13.3071 23.287C13.2503 23.15 13.2355 22.9992 13.2644 22.8537C13.2933 22.7082 13.3648 22.5746 13.4697 22.4697C13.5746 22.3648 13.7082 22.2934 13.8537 22.2644C13.9992 22.2355 14.15 22.2503 14.287 22.3071C14.4241 22.3639 14.5412 22.46 14.6236 22.5833C14.706 22.7067 14.75 22.8517 14.75 23C14.75 23.1989 14.671 23.3897 14.5303 23.5303C14.3897 23.671 14.1989 23.75 14 23.75ZM14 17.75C13.8517 17.75 13.7067 17.706 13.5833 17.6236C13.46 17.5412 13.3639 17.4241 13.3071 17.287C13.2503 17.15 13.2355 16.9992 13.2644 16.8537C13.2933 16.7082 13.3648 16.5746 13.4697 16.4697C13.5746 16.3648 13.7082 16.2933 13.8537 16.2644C13.9992 16.2355 14.15 16.2503 14.287 16.3071C14.4241 16.3639 14.5412 16.46 14.6236 16.5833C14.706 16.7067 14.75 16.8517 14.75 17C14.75 17.1989 14.671 17.3897 14.5303 17.5303C14.3897 17.671 14.1989 17.75 14 17.75ZM20 23C19.4067 23 18.8266 22.8241 18.3333 22.4944C17.8399 22.1648 17.4554 21.6962 17.2284 21.1481C17.0013 20.5999 16.9419 19.9967 17.0576 19.4147C17.1734 18.8328 17.4591 18.2982 17.8787 17.8787C18.2982 17.4591 18.8328 17.1734 19.4147 17.0576C19.9967 16.9419 20.5999 17.0013 21.1481 17.2284C21.6962 17.4554 22.1648 17.8399 22.4944 18.3333C22.8241 18.8266 23 19.4067 23 20C23 20.7956 22.6839 21.5587 22.1213 22.1213C21.5587 22.6839 20.7956 23 20 23ZM26 23.75C25.8517 23.75 25.7067 23.706 25.5833 23.6236C25.46 23.5412 25.3639 23.4241 25.3071 23.287C25.2503 23.15 25.2355 22.9992 25.2644 22.8537C25.2934 22.7082 25.3648 22.5746 25.4697 22.4697C25.5746 22.3648 25.7082 22.2934 25.8537 22.2644C25.9992 22.2355 26.15 22.2503 26.287 22.3071C26.4241 22.3639 26.5412 22.46 26.6236 22.5833C26.706 22.7067 26.75 22.8517 26.75 23C26.75 23.1989 26.671 23.3897 26.5303 23.5303C26.3897 23.671 26.1989 23.75 26 23.75ZM26 17.75C25.8517 17.75 25.7067 17.706 25.5833 17.6236C25.46 17.5412 25.3639 17.4241 25.3071 17.287C25.2503 17.15 25.2355 16.9992 25.2644 16.8537C25.2934 16.7082 25.3648 16.5746 25.4697 16.4697C25.5746 16.3648 25.7082 16.2933 25.8537 16.2644C25.9992 16.2355 26.15 16.2503 26.287 16.3071C26.4241 16.3639 26.5412 16.46 26.6236 16.5833C26.706 16.7067 26.75 16.8517 26.75 17C26.75 17.1989 26.671 17.3897 26.5303 17.5303C26.3897 17.671 26.1989 17.75 26 17.75ZM21.5 20C21.5 20.2967 21.412 20.5867 21.2472 20.8334C21.0824 21.08 20.8481 21.2723 20.574 21.3858C20.2999 21.4994 19.9983 21.5291 19.7074 21.4712C19.4164 21.4133 19.1491 21.2704 18.9393 21.0607C18.7296 20.8509 18.5867 20.5836 18.5288 20.2926C18.4709 20.0017 18.5006 19.7001 18.6142 19.426C18.7277 19.1519 18.92 18.9176 19.1666 18.7528C19.4133 18.588 19.7033 18.5 20 18.5C20.3978 18.5 20.7794 18.658 21.0607 18.9393C21.342 19.2206 21.5 19.6022 21.5 20Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <linearGradient id="paint0_linear_567_33076" x1="20" y1="0" x2="20" y2="40" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#3250FF"/>
+                            <stop offset="1" stop-color="#2BB2FE"/>
+                            </linearGradient>
+                            <clipPath id="clip0_567_33076">
+                            <rect width="18" height="18" fill="white" transform="translate(11 11)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                      </span>
+                      <div>
+                        <span>Income</span>
+                        <p>
+                          <i class="fa-solid fa-dollar-sign"></i> 75,000
+                          <span>10%<i class="fa-solid fa-caret-up"></i></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body d-flex gap-2 py-0">
+                      <span>
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="40" rx="20" fill="url(#paint0_linear_567_33088)"/>
+                            <g clip-path="url(#clip0_567_33088)">
+                            <path d="M25.25 13.25H14.75C13.7558 13.2512 12.8027 13.6467 12.0997 14.3497C11.3967 15.0527 11.0012 16.0058 11 17H29C28.9988 16.0058 28.6033 15.0527 27.9003 14.3497C27.1973 13.6467 26.2442 13.2512 25.25 13.25Z" fill="white"/>
+                            <path d="M11 23C11.0012 23.9942 11.3967 24.9473 12.0997 25.6503C12.8027 26.3533 13.7558 26.7488 14.75 26.75H25.25C26.2442 26.7488 27.1973 26.3533 27.9003 25.6503C28.6033 24.9473 28.9988 23.9942 29 23V18.5H11V23ZM16.25 22.625C16.25 22.8475 16.184 23.065 16.0604 23.25C15.9368 23.435 15.7611 23.5792 15.5555 23.6644C15.35 23.7495 15.1238 23.7718 14.9055 23.7284C14.6873 23.685 14.4868 23.5778 14.3295 23.4205C14.1722 23.2632 14.065 23.0627 14.0216 22.8445C13.9782 22.6262 14.0005 22.4 14.0856 22.1945C14.1708 21.9889 14.315 21.8132 14.5 21.6896C14.685 21.566 14.9025 21.5 15.125 21.5C15.4234 21.5 15.7095 21.6185 15.9205 21.8295C16.1315 22.0405 16.25 22.3266 16.25 22.625Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <linearGradient id="paint0_linear_567_33088" x1="20" y1="0" x2="20" y2="40" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#F86624"/>
+                            <stop offset="1" stop-color="#F9C80E"/>
+                            </linearGradient>
+                            <clipPath id="clip0_567_33088">
+                            <rect width="18" height="18" fill="white" transform="translate(11 11)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                      </span>
+                      <div>
+                        <span>Expenses</span>
+                        <p>
+                          <i class="fa-solid fa-dollar-sign"></i> 26,201
+                          <span style="color: #EB3D4D;">10%<i class="fa-solid fa-caret-up"></i></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="incom-expenses"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row cards">
+            <div class="col-md-8 mb-3 tabble-orders">
+              <div class="card overflow-hidden recent-orders">
+                <div
+                  class="card-header d-flex align-items-baseline border-0 rounded-4 bg-white"
+                >
+                  <div class="col-md-6 align-items-baseline d-flex gap-3">
+                    <h4 class="m-0">Transaction</h4>
+                  </div>
+                  <div class="col-md-4"></div>
+                  <div class="col-md-2">
+                    <div class="filter">
+                      <button class="border-0 bg-transparent">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.8333 6.66667C10.8333 7.1269 11.2064 7.5 11.6667 7.5C12.1269 7.5 12.5 7.1269 12.5 6.66667V5.83333H16.6667C17.1269 5.83333 17.5 5.46024 17.5 5C17.5 4.53976 17.1269 4.16667 16.6667 4.16667H12.5V3.33333C12.5 2.8731 12.1269 2.5 11.6667 2.5C11.2064 2.5 10.8333 2.8731 10.8333 3.33333V6.66667Z"
+                            fill="#667085"
+                          />
+                          <path
+                            d="M2.5 10C2.5 9.53976 2.8731 9.16667 3.33333 9.16667H4.58333C4.81345 9.16667 5 9.35321 5 9.58333V10.4167C5 10.6468 4.81345 10.8333 4.58333 10.8333H3.33333C2.8731 10.8333 2.5 10.4602 2.5 10Z"
+                            fill="#667085"
+                          />
+                          <path
+                            d="M7.5 7.5C7.03976 7.5 6.66667 7.8731 6.66667 8.33333V11.6667C6.66667 12.1269 7.03976 12.5 7.5 12.5C7.96024 12.5 8.33333 12.1269 8.33333 11.6667V10.8333H16.6667C17.1269 10.8333 17.5 10.4602 17.5 10C17.5 9.53976 17.1269 9.16667 16.6667 9.16667H8.33333V8.33333C8.33333 7.8731 7.96024 7.5 7.5 7.5Z"
+                            fill="#667085"
+                          />
+                          <path
+                            d="M2.5 5C2.5 4.53976 2.8731 4.16667 3.33333 4.16667H8.75C8.98012 4.16667 9.16667 4.35321 9.16667 4.58333V5.41667C9.16667 5.64679 8.98012 5.83333 8.75 5.83333H3.33333C2.8731 5.83333 2.5 5.46024 2.5 5Z"
+                            fill="#667085"
+                          />
+                          <path
+                            d="M12.5 13.3333C12.5 12.8731 12.8731 12.5 13.3333 12.5C13.7936 12.5 14.1667 12.8731 14.1667 13.3333V14.1667H16.6667C17.1269 14.1667 17.5 14.5398 17.5 15C17.5 15.4602 17.1269 15.8333 16.6667 15.8333H14.1667V16.6667C14.1667 17.1269 13.7936 17.5 13.3333 17.5C12.8731 17.5 12.5 17.1269 12.5 16.6667V13.3333Z"
+                            fill="#667085"
+                          />
+                          <path
+                            d="M2.5 15C2.5 14.5398 2.8731 14.1667 3.33333 14.1667H10.4167C10.6468 14.1667 10.8333 14.3532 10.8333 14.5833V15.4167C10.8333 15.6468 10.6468 15.8333 10.4167 15.8333H3.33333C2.8731 15.8333 2.5 15.4602 2.5 15Z"
+                            fill="#667085"
+                          />
+                        </svg>
+                        Filters
+                      </button>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="w-100 overflow-auto" style="max-height: 545px">
+                  <table class="table table-hover table-responsive">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name/Business</th>
+                        <th scope="col">Date & Time</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="d-flex product-name gap-3">
+                            <img src="./img/0cbe67f061bba0c86300f3439021ccde.png" alt="" />
+                            <a href="#">
+                              <p class="">Figma Pro</p>
+                              <span>Software</span>
+                            </a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="coustomer-name">
+                            <p>12 Dec 2023</p>
+                            <small>03:00 PM</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="total">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            121.00
+                          </div>
+                        </td>
+                        <td>
+                          <div class="status">
+                            <button class="border-0 processing rounded-3 px-3">
+                              Processing
+                            </button>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="action d-flex gap-3">
+                            <a href="" class="text-decoration-none">
+                              <i class="fa-solid fa-eye"></i>
+                            </a>
+                            <a href="">
+                              <i class="fa-regular fa-trash-can"></i>
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex product-name gap-3">
+                            <img src="./img/Img (3).svg" alt="" />
+                            <a href="#">
+                              <p class="">Handmade Pouch</p>
+                              <span>+3 other products</span>
+                            </a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="coustomer-name">
+                            <p>10 Dec 2023</p>
+                            <small>03:00 PM</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="total">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            121.00
+                          </div>
+                        </td>
+                        <td>
+                          <div class="status">
+                            <button class="border-0 delivered rounded-3 px-3">
+                              Delivered
+                            </button>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="action d-flex gap-3">
+                            <a href="" class="text-decoration-none">
+                              <i class="fa-solid fa-eye"></i>
+                            </a>
+                            <a href="">
+                              <i class="fa-regular fa-trash-can"></i>
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex product-name gap-3">
+                            <img src="./img/Img (2).svg" alt="" />
+                            <a href="#">
+                              <p class="">Handmade Pouch</p>
+                              <span>+3 other products</span>
+                            </a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="coustomer-name">
+                            <p>05 Dec 2023</p>
+                            <small>03:00 PM</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="total">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            121.00
+                          </div>
+                        </td>
+                        <td>
+                          <div class="status">
+                            <button class="border-0 processing rounded-3 px-3">
+                              Processing
+                            </button>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="action d-flex gap-3">
+                            <a href="" class="text-decoration-none">
+                              <i class="fa-solid fa-eye"></i>
+                            </a>
+                            <a href="">
+                              <i class="fa-regular fa-trash-can"></i>
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex product-name gap-3">
+                            <img src="./img/Img (3).svg" alt="" />
+                            <a href="#">
+                              <p class="">Handmade Pouch</p>
+                              <span>+3 other products</span>
+                            </a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="coustomer-name">
+                            <p>29 Oct 2023</p>
+                            <small>03:00 PM</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="total">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            121.00
+                          </div>
+                        </td>
+                        <td>
+                          <div class="status">
+                            <button class="border-0 shiped rounded-3 px-3">
+                              Shiped
+                            </button>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="action d-flex gap-3">
+                            <a href="" class="text-decoration-none">
+                              <i class="fa-solid fa-eye"></i>
+                            </a>
+                            <a href="">
+                              <i class="fa-regular fa-trash-can"></i>
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex product-name gap-3">
+                            <img src="./img/Img (3).svg" alt="" />
+                            <a href="#">
+                              <p class="">Handmade Pouch</p>
+                              <span>+3 other products</span>
+                            </a>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="coustomer-name">
+                            <p>15 Oct 2023</p>
+                            <small>03:00 PM</small>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="total">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            121.00
+                          </div>
+                        </td>
+                        <td>
+                          <div class="status">
+                            <button class="border-0 shiped rounded-3 px-3">
+                              Shiped
+                            </button>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="action d-flex gap-3">
+                            <a href="" class="text-decoration-none">
+                              <i class="fa-solid fa-eye"></i>
+                            </a>
+                            <a href="">
+                              <i class="fa-regular fa-trash-can"></i>
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+                <div
+                  class="card-footer pagination-parent pt-0 d-flex justify-content-between align-items-center rounded-4 bg-white border-0"
+                >
+                  <p>Showing 1-5 from 100</p>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination d-flex gap-2">
+                      <li class="page-item">
+                        <a
+                          class="page-link rounded-3"
+                          href="#"
+                          aria-label="Previous"
+                        >
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link rounded-3" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link rounded-3" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link rounded-3" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link rounded-3" href="#">...</a>
+                      </li>
+
+                      <li class="page-item">
+                        <a
+                          class="page-link rounded-3"
+                          href="#"
+                          aria-label="Next"
+                        >
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 circle-chart">
+              <div class="card overflow-hidden all-expenses">
+                <div class="card-header bg-white border-0 rounded-4">
+                  <h4>All Expenses</h4>
+                  <p>Based on Categories</p>
+                </div>
+                <div id="expenses" class="position-relative">
+                  <div class="chart-content text-center">
+                    <h4 class="m-0">
+                      <i class="fa-solid fa-dollar-sign"></i>23,750
+                    </h4>
+                    <span
+                      ><span class="text-success opacity-100">10%</span> +<i
+                        class="fa-solid fa-dollar-sign"
+                      ></i
+                      >150 today</span
+                    >
+                  </div>
+                </div>
+                <div class="result-chart px-3 mt-3">
+                  <p class="">
+                    Google Ads
+                    <span>
+                      <i class="fa-solid fa-dollar-sign"></i>
+                      10,000
+                    </span>
+                  </p>
+                  <p class="">
+                    Facebook Ads
+                    <span>
+                      <i class="fa-solid fa-dollar-sign"></i>
+                      10,000
+                    </span>
+                  </p>
+                  <p class="">
+                    Shoping
+                    <span>
+                      <i class="fa-solid fa-dollar-sign"></i>
+                      10,000
+                    </span>
+                  </p>
+                  <p class="">
+                    Entertaiment
+                    <span>
+                      <i class="fa-solid fa-dollar-sign"></i>
+                      10,000
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header px-2 py-1">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Modal title
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="d-flex" role="search">
+              <button class="btn" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jqyary.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/apexcharts.js"></script>
+    <script src="./js/custom-charts.js"></script>
+    <script src="./js/custom.js"></script>
+    <script src="./js/popup.js"></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
+  </body>
+</html>

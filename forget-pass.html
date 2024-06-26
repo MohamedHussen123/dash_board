@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dazel</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Link Font Awesome CSS from CDN -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="./css/mdb.min.css" /> -->
+    <link rel="stylesheet" href="./css/master.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&#038;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-fluid register">
+      <div class="row">
+        <div class="col-md-6 position-relative background-section">
+          <img src="./img/Statitstic Card with Icon.svg" alt="" />
+          <img src="./img/4 Col_Wheel.svg" alt="" />
+        </div>
+        <div class="col-md-6">
+          <form action="">
+            <div class="row w-dashlab">
+              <div class="col-md-12 text-center">
+                <h4>Forgot Password</h4>
+                <p class="text-black-50">Enter the email address you used when joined and we’ll send reset instructions to reset your password.</p>
+              </div>
+              
+              <span class="position-relative or"> or </span>
+              <div class="col-md-12 mb-3 email-user">
+                <label for="email">Email</label>
+                <input
+                  required
+                  type="email"
+                  name="email"
+                  class="w-100"
+                  placeholder="Your email. . ."
+                />
+              </div>
+              
+              <div class="col-md-12 submit-btn my-3">
+                <button type="submit">Send Reset Instuctions</button>
+              </div>
+              <div class="login-link">
+                <p>Back to log in page? <a href="login.html">Back now</a></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jqyary.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+      function showPassword() {
+        let passInput = document.getElementById("password");
+        let openEye = document.getElementById("openEye");
+        let closeEye = document.getElementById("closeEye");
+        if (passInput.type === "password") {
+          passInput.type = "text";
+          closeEye.classList.remove("d-none");
+          openEye.classList.add("d-none");
+        } else {
+          passInput.type = "password";
+          openEye.classList.remove("d-none");
+          closeEye.classList.add("d-none");
+        }
+      }
+    </script>
+  </body>
+</html>

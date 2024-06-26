@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Messaging App UI with Dark Mode</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="app">
+      <div class="header">
+        
+        <div class="search-bar d-flex gap-2">
+          <input type="text" placeholder="Search Massage..." />
+          <button class="hide-show-chat" onclick="toggleChat()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M8 9h8" />
+              <path d="M8 13h6" />
+              <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+            </svg>
+          </button>
+        </div>
+        <div class="user-settings">
+          <div class="hide-show-details">
+            <button type="button" onclick="showDetails()" id="hide-show-chat-details">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+              </svg>
+            </button>
+          </div>
+          <div class="settings">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"
+              />
+            </svg>
+          </div>
+          <img
+            class="user-profile"
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%281%29.png"
+            alt=""
+            class="account-profile"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="conversation-area d-none" id="conversation-area"  >
+          <div class="msg online">
+            <img
+              class="msg-profile"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%281%29.png"
+              alt=""
+            />
+            <div class="msg-detail">
+              <div class="msg-username">Madison Jones</div>
+              <div class="msg-content">
+                <span class="msg-message">What time was our meet</span>
+                <span class="msg-date">20m</span>
+              </div>
+            </div>
+            <span class="num-msg">2</span>
+          </div>
+          <div class="msg active">
+            <img
+              class="msg-profile"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%2812%29.png"
+              alt=""
+            />
+            <div class="msg-detail">
+              <div class="msg-username">Miguel Cohen</div>
+              <div class="msg-content">
+                <span class="msg-message"
+                  >Adaptogen taiyaki austin jean shorts brunch</span
+                >
+                <span class="msg-date">20m</span>
+              </div>
+            </div>
+             <span class="num-msg">2</span>
+          </div>
+          <div class="msg ">
+            <div class="msg-profile group">
+              <svg
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="css-i6dzq1"
+              >
+                <path d="M12 2l10 6.5v7L12 22 2 15.5v-7L12 2zM12 22v-6.5" />
+                <path d="M22 8.5l-10 7-10-7" />
+                <path d="M2 15.5l10-7 10 7M12 2v6.5" />
+              </svg>
+            </div>
+            <div class="msg-detail">
+              <div class="msg-username">CodePen Group</div>
+              <div class="msg-content">
+                <span class="msg-message">Aysenur: I love CSS</span>
+                <span class="msg-date">28m</span>
+              </div>
+            </div>
+          </div>
+          <div class="msg online">
+            <img
+              class="msg-profile"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%282%29.png"
+              alt=""
+            />
+            <div class="msg-detail">
+              <div class="msg-username">Lea Debere</div>
+              <div class="msg-content">
+                <span class="msg-message">Shoreditch iPhone jianbing</span>
+                <span class="msg-date">45m</span>
+              </div>
+            </div>
+          </div>
+          <div class="msg online">
+            <img
+              class="msg-profile"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%281%29+%281%29.png"
+              alt=""
+            />
+            <div class="msg-detail">
+              <div class="msg-username">Jordan Smith</div>
+              <div class="msg-content">
+                <span class="msg-message"
+                  >Snackwave craft beer raclette, beard kombucha
+                </span>
+                <span class="msg-date">2h</span>
+              </div>
+            </div>
+          </div>
+          <div class="msg">
+            <img
+              class="msg-profile"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%284%29+%281%29.png"
+              alt=""
+            />
+            <div class="msg-detail">
+              <div class="msg-username">Jared Jackson</div>
+              <div class="msg-content">
+                <span class="msg-message"
+                  >Tattooed brooklyn typewriter gastropub</span
+                >
+                <span class="msg-date">18m</span>
+              </div>
+            </div>
+          </div>
+          <div class="msg online">
+            <img
+              class="msg-profile"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%283%29+%281%29.png"
+              alt=""
+            />
+            <div class="msg-detail">
+              <div class="msg-username">Henry Clark</div>
+              <div class="msg-content">
+                <span class="msg-message"
+                  >Ethical typewriter williamsburg lo-fi street art</span
+                >
+                <span class="msg-date">2h</span>
+              </div>
+            </div>
+          </div>
+          <div class="msg">
+            <img
+              class="msg-profile"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/qs6F3dgm.png"
+              alt=""
+            />
+            <div class="msg-detail">
+              <div class="msg-username">Jason Mraz</div>
+              <div class="msg-content">
+                <span class="msg-message"
+                  >I'm lucky I'm in love with my best friend</span
+                >
+                <span class="msg-date">4h</span>
+              </div>
+            </div>
+          </div>
+          <div class="msg">
+            <img
+              class="msg-profile"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%288%29.png"
+              alt=""
+            />
+            <div class="msg-detail">
+              <div class="msg-username">Chiwa Lauren</div>
+              <div class="msg-content">
+                <span class="msg-message">Pabst af 3 wolf moon</span>
+                <span class="msg-date">28m</span>
+              </div>
+            </div>
+          </div>
+          <div class="msg">
+            <img
+              class="msg-profile"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%289%29.png"
+              alt=""
+            />
+            <div class="msg-detail">
+              <div class="msg-username">Caroline Orange</div>
+              <div class="msg-content">
+                <span class="msg-message"
+                  >Bespoke aesthetic lyft woke cornhole</span
+                >
+                <span class="msg-date">35m</span>
+              </div>
+            </div>
+          </div>
+          <div class="msg">
+            <img
+              class="msg-profile"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%286%29.png"
+              alt=""
+            />
+            <div class="msg-detail">
+              <div class="msg-username">Lina Ashma</div>
+              <div class="msg-content">
+                <span class="msg-message">Migas food truck crucifix vexi</span>
+                <span class="msg-date">42m</span>
+              </div>
+            </div>
+          </div>
+          <!-- <button class="add"></button> -->
+          <div class="overlay"></div>
+        </div>
+        <div class="chat-area">
+          <div class="chat-area-header">
+            <div class="chat-area-title">Miguel Cohen</div>
+            
+          </div>
+          <div class="chat-area-main">
+            <div class="chat-msg">
+              <div class="chat-msg-profile">
+                <img
+                  class="chat-msg-img"
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%283%29+%281%29.png"
+                  alt=""
+                />
+                <div class="chat-msg-date">Message seen 1.22pm</div>
+              </div>
+              <div class="chat-msg-content">
+                <div class="chat-msg-text">
+                  Luctus et ultrices posuere cubilia curae.
+                </div>
+                <div class="chat-msg-text">
+                  <img
+                    src="https://media0.giphy.com/media/yYSSBtDgbbRzq/giphy.gif?cid=ecf05e47344fb5d835f832a976d1007c241548cc4eea4e7e&rid=giphy.gif"
+                  />
+                </div>
+                <div class="chat-msg-text">
+                  Neque gravida in fermentum et sollicitudin ac orci phasellus
+                  egestas. Pretium lectus quam id leo.
+                </div>
+              </div>
+            </div>
+            <div class="chat-msg owner">
+              <div class="chat-msg-profile">
+                <img
+                  class="chat-msg-img"
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%281%29.png"
+                  alt=""
+                />
+                <div class="chat-msg-date">Message seen 1.22pm</div>
+              </div>
+              <div class="chat-msg-content">
+                <div class="chat-msg-text">
+                  Sit amet risus nullam eget felis eget. Dolor sed viverra
+                  ipsum😂😂😂
+                </div>
+                <div class="chat-msg-text">
+                  Cras mollis nec arcu malesuada tincidunt.
+                </div>
+              </div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-msg-profile">
+                <img
+                  class="chat-msg-img"
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%282%29.png"
+                  alt=""
+                />
+                <div class="chat-msg-date">Message seen 2.45pm</div>
+              </div>
+              <div class="chat-msg-content">
+                <div class="chat-msg-text">
+                  Aenean tristique maximus tortor non tincidunt. Vestibulum ante
+                  ipsum primis in faucibus orci luctus et ultrices posuere
+                  cubilia curae😊
+                </div>
+                <div class="chat-msg-text">
+                  Ut faucibus pulvinar elementum integer enim neque volutpat.
+                </div>
+              </div>
+            </div>
+            <div class="chat-msg owner">
+              <div class="chat-msg-profile">
+                <img
+                  class="chat-msg-img"
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%281%29.png"
+                  alt=""
+                />
+                <div class="chat-msg-date">Message seen 2.50pm</div>
+              </div>
+              <div class="chat-msg-content">
+                <div class="chat-msg-text">
+                  posuere eget augue sodales, aliquet posuere eros.
+                </div>
+                <div class="chat-msg-text">
+                  Cras mollis nec arcu malesuada tincidunt.
+                </div>
+              </div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-msg-profile">
+                <img
+                  class="chat-msg-img"
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%2812%29.png"
+                  alt=""
+                />
+                <div class="chat-msg-date">Message seen 3.16pm</div>
+              </div>
+              <div class="chat-msg-content">
+                <div class="chat-msg-text">
+                  Egestas tellus rutrum tellus pellentesque
+                </div>
+              </div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-msg-profile">
+                <img
+                  class="chat-msg-img"
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%283%29+%281%29.png"
+                  alt=""
+                  class="account-profile"
+                  alt=""
+                />
+                <div class="chat-msg-date">Message seen 3.16pm</div>
+              </div>
+              <div class="chat-msg-content">
+                <div class="chat-msg-text">
+                  Consectetur adipiscing elit pellentesque habitant morbi
+                  tristique senectus et.
+                </div>
+              </div>
+            </div>
+            <div class="chat-msg owner">
+              <div class="chat-msg-profile">
+                <img
+                  class="chat-msg-img"
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%281%29.png"
+                  alt=""
+                />
+                <div class="chat-msg-date">Message seen 2.50pm</div>
+              </div>
+              <div class="chat-msg-content">
+                <div class="chat-msg-text">Tincidunt arcu non sodales😂</div>
+              </div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-msg-profile">
+                <img
+                  class="chat-msg-img"
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%282%29.png"
+                  alt=""
+                />
+                <div class="chat-msg-date">Message seen 3.16pm</div>
+              </div>
+              <div class="chat-msg-content">
+                <div class="chat-msg-text">
+                  Consectetur adipiscing elit pellentesque habitant morbi
+                  tristique senectus et🥰
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chat-area-footer">
+            
+            
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-paperclip"
+            >
+              <path
+                d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"
+              />
+            </svg>
+            <input type="text" placeholder="Type something here..." />
+            <button class="send-msg">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_393_47770)">
+              <path d="M15.7989 1.14551L3.45898 13.4821C3.72576 13.6121 4.01837 13.6805 4.31513 13.682H6.42851C6.60531 13.6815 6.77493 13.7518 6.89957 13.8772L8.04488 15.0219C8.66598 15.6472 9.51075 15.9992 10.3921 15.9999C10.756 15.9996 11.1174 15.9399 11.4621 15.8234C12.6505 15.4338 13.5148 14.4036 13.6921 13.1656L15.9434 2.47206C16.0509 2.02648 15.9998 1.55742 15.7989 1.14551Z" fill="white"/>
+              <path d="M13.5469 0.0513575L2.87929 2.29869C1.05657 2.5491 -0.218033 4.22972 0.0323784 6.05243C0.131288 6.77225 0.462807 7.44004 0.976435 7.95395L2.12109 9.0986C2.2462 9.22368 2.31644 9.39339 2.31632 9.57032V11.6837C2.31785 11.9805 2.38618 12.2731 2.5162 12.5398L14.8541 0.199956C14.4486 0.000700427 13.9867 -0.0517992 13.5469 0.0513575Z" fill="white"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_393_47770">
+              <rect width="16" height="16" fill="white"/>
+              </clipPath>
+              </defs>
+            </svg>
+            </button>
+
+            
+          </div>
+        </div>
+        <div class="detail-area d-none" id="details-area">
+          <div class="detail-area-header">
+            <div class="msg-profile group">
+              <svg
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="css-i6dzq1"
+              >
+                <path d="M12 2l10 6.5v7L12 22 2 15.5v-7L12 2zM12 22v-6.5" />
+                <path d="M22 8.5l-10 7-10-7" />
+                <path d="M2 15.5l10-7 10 7M12 2v6.5" />
+              </svg>
+            </div>
+            
+            <div class="detail-subtitle"></div>
+          </div>
+          <div class="detail-title text-center mb-0">Project Alpha</div>
+            <hr>
+
+          <div class="detail-changes">
+            <div class="about-user">
+              <span>About</span>
+              <p>Project alpha development team lorem ipsum dolor si amet</p>
+            </div>
+            <div class="about-user">
+              <span>Location</span>
+              <p>New York, USA</p>
+            </div>
+            <div class="about-user">
+              <span>Created</span>
+              <p>12 December 2023</p>
+            </div>
+            
+          </div>
+          <div class="detail-photos">
+            <div class="detail-photo-title">
+              
+              Images
+            </div>
+            <div class="detail-photo-grid">
+              <img
+                src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2168&q=80"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1516085216930-c93a002a8b01?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1458819714733-e5ab3d536722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1520013817300-1f4c1cb245ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2287&q=80"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2247&q=80"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1560393464-5c69a73c5770?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1301&q=80"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2249&q=80"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2309&q=80"
+              />
+
+              <img
+                src="https://images.unsplash.com/photo-1473170611423-22489201d919?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2251&q=80"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1579613832111-ac7dfcc7723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2189&q=80"
+              />
+            </div>
+            <div class="view-more">View More</div>
+            <hr>
+            <div class="add-member-group">
+              <div class="add-member-label mb-3">
+                <p> Mumber(21) </p>
+                <button type="button" name="button">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.4167 6.41668H7.58332V0.583324C7.58332 0.26116 7.32216 0 7 0C6.67784 0 6.41668 0.26116 6.41668 0.583324V6.41665H0.583324C0.26116 6.41668 0 6.67784 0 7C0 7.32216 0.26116 7.58332 0.583324 7.58332H6.41665V13.4166C6.41665 13.7388 6.67781 14 6.99997 14C7.32214 14 7.5833 13.7388 7.5833 13.4166V7.58332H13.4166C13.7388 7.58332 13.9999 7.32216 13.9999 7C14 6.67784 13.7388 6.41668 13.4167 6.41668Z" fill="#1D1F2C"/>
+                  </svg>
+                  Add Member</button>
+              </div>
+              <div class="row mb-2">
+                <div class="col-md-2 position-relative">
+                  <img src="https://freesvg.org/img/FaceWoman.png" alt="">
+                  <span></span>
+                </div>
+                <div class="col-md-7">
+                  <p>Peg Legge</p>
+                  <span>Project Manager</span>
+                </div>
+                <div class="col-md-3 d-flex">
+                  <button>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_396_84917)">
+                      <path d="M16.3335 8.33304C16.1567 8.33304 15.9872 8.2628 15.8621 8.13778C15.7371 8.01276 15.6669 7.84319 15.6669 7.66638C15.6655 6.25232 15.1031 4.89659 14.1032 3.8967C13.1033 2.89681 11.7476 2.33445 10.3335 2.33304C10.1567 2.33304 9.98715 2.2628 9.86213 2.13778C9.7371 2.01276 9.66686 1.84319 9.66686 1.66637C9.66686 1.48956 9.7371 1.31999 9.86213 1.19497C9.98715 1.06995 10.1567 0.999708 10.3335 0.999708C12.101 1.00165 13.7956 1.70465 15.0454 2.95447C16.2953 4.2043 16.9983 5.89886 17.0002 7.66638C17.0002 7.84319 16.93 8.01276 16.8049 8.13778C16.6799 8.2628 16.5103 8.33304 16.3335 8.33304ZM14.3335 7.66638C14.3335 6.60551 13.9121 5.58809 13.162 4.83795C12.4118 4.0878 11.3944 3.66637 10.3335 3.66637C10.1567 3.66637 9.98715 3.73661 9.86213 3.86164C9.7371 3.98666 9.66686 4.15623 9.66686 4.33304C9.66686 4.50985 9.7371 4.67942 9.86213 4.80445C9.98715 4.92947 10.1567 4.99971 10.3335 4.99971C11.0408 4.99971 11.7191 5.28066 12.2191 5.78076C12.7192 6.28085 13.0002 6.95913 13.0002 7.66638C13.0002 7.84319 13.0704 8.01276 13.1955 8.13778C13.3205 8.2628 13.4901 8.33304 13.6669 8.33304C13.8437 8.33304 14.0132 8.2628 14.1383 8.13778C14.2633 8.01276 14.3335 7.84319 14.3335 7.66638ZM15.7889 15.7757L16.3955 15.0764C16.7817 14.689 16.9985 14.1643 16.9985 13.6174C16.9985 13.0704 16.7817 12.5458 16.3955 12.1584C16.3749 12.1377 14.7709 10.9037 14.7709 10.9037C14.3859 10.5373 13.8746 10.3332 13.3431 10.334C12.8116 10.3347 12.3008 10.5402 11.9169 10.9077L10.6462 11.9784C9.60898 11.5491 8.66679 10.9192 7.87372 10.1247C7.08065 9.33028 6.45234 8.387 6.02486 7.34904L7.09153 6.08238C7.45934 5.69849 7.66506 5.18763 7.66593 4.65598C7.6668 4.12433 7.46275 3.61279 7.0962 3.22771C7.0962 3.22771 5.86086 1.62571 5.8402 1.60504C5.45983 1.22221 4.94412 1.00439 4.40448 0.998651C3.86485 0.992913 3.34462 1.19972 2.9562 1.57437L2.18953 2.24104C-2.3398 7.49571 7.41353 17.1737 12.8415 16.9997C13.3897 17.0029 13.9329 16.8962 14.4391 16.686C14.9453 16.4758 15.4042 16.1662 15.7889 15.7757Z" fill="#A3A9B6"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_396_84917">
+                      <rect width="16" height="16" fill="white" transform="translate(1 1)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                  <button>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_396_84920)">
+                      <path d="M16.9693 4.69458L11.3573 10.3066C10.7316 10.9307 9.88383 11.2813 9 11.2813C8.11617 11.2813 7.26842 10.9307 6.64267 10.3066L1.03067 4.69458C1.02133 4.79991 1 4.89525 1 4.99991V12.9999C1.00106 13.8836 1.35259 14.7309 1.97748 15.3558C2.60237 15.9807 3.4496 16.3322 4.33333 16.3332H13.6667C14.5504 16.3322 15.3976 15.9807 16.0225 15.3558C16.6474 14.7309 16.9989 13.8836 17 12.9999V4.99991C17 4.89525 16.9787 4.79991 16.9693 4.69458Z" fill="#A3A9B6"/>
+                      <path d="M10.4148 9.36384L16.5041 3.27384C16.2091 2.78472 15.7931 2.37986 15.2961 2.09832C14.7991 1.81679 14.2379 1.66806 13.6668 1.6665H4.33343C3.76224 1.66806 3.20109 1.81679 2.70411 2.09832C2.20713 2.37986 1.79108 2.78472 1.49609 3.27384L7.58543 9.36384C7.96114 9.73805 8.46982 9.94815 9.00009 9.94815C9.53037 9.94815 10.039 9.73805 10.4148 9.36384Z" fill="#A3A9B6"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_396_84920">
+                      <rect width="16" height="16" fill="white" transform="translate(1 1)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-md-2 position-relative">
+                  <img src="https://freesvg.org/img/FaceWoman.png" alt="">
+                  <span></span>
+                </div>
+                <div class="col-md-7">
+                  <p>Peg Legge</p>
+                  <span>Project Manager</span>
+                </div>
+                <div class="col-md-3 d-flex">
+                  <button>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_396_84917)">
+                      <path d="M16.3335 8.33304C16.1567 8.33304 15.9872 8.2628 15.8621 8.13778C15.7371 8.01276 15.6669 7.84319 15.6669 7.66638C15.6655 6.25232 15.1031 4.89659 14.1032 3.8967C13.1033 2.89681 11.7476 2.33445 10.3335 2.33304C10.1567 2.33304 9.98715 2.2628 9.86213 2.13778C9.7371 2.01276 9.66686 1.84319 9.66686 1.66637C9.66686 1.48956 9.7371 1.31999 9.86213 1.19497C9.98715 1.06995 10.1567 0.999708 10.3335 0.999708C12.101 1.00165 13.7956 1.70465 15.0454 2.95447C16.2953 4.2043 16.9983 5.89886 17.0002 7.66638C17.0002 7.84319 16.93 8.01276 16.8049 8.13778C16.6799 8.2628 16.5103 8.33304 16.3335 8.33304ZM14.3335 7.66638C14.3335 6.60551 13.9121 5.58809 13.162 4.83795C12.4118 4.0878 11.3944 3.66637 10.3335 3.66637C10.1567 3.66637 9.98715 3.73661 9.86213 3.86164C9.7371 3.98666 9.66686 4.15623 9.66686 4.33304C9.66686 4.50985 9.7371 4.67942 9.86213 4.80445C9.98715 4.92947 10.1567 4.99971 10.3335 4.99971C11.0408 4.99971 11.7191 5.28066 12.2191 5.78076C12.7192 6.28085 13.0002 6.95913 13.0002 7.66638C13.0002 7.84319 13.0704 8.01276 13.1955 8.13778C13.3205 8.2628 13.4901 8.33304 13.6669 8.33304C13.8437 8.33304 14.0132 8.2628 14.1383 8.13778C14.2633 8.01276 14.3335 7.84319 14.3335 7.66638ZM15.7889 15.7757L16.3955 15.0764C16.7817 14.689 16.9985 14.1643 16.9985 13.6174C16.9985 13.0704 16.7817 12.5458 16.3955 12.1584C16.3749 12.1377 14.7709 10.9037 14.7709 10.9037C14.3859 10.5373 13.8746 10.3332 13.3431 10.334C12.8116 10.3347 12.3008 10.5402 11.9169 10.9077L10.6462 11.9784C9.60898 11.5491 8.66679 10.9192 7.87372 10.1247C7.08065 9.33028 6.45234 8.387 6.02486 7.34904L7.09153 6.08238C7.45934 5.69849 7.66506 5.18763 7.66593 4.65598C7.6668 4.12433 7.46275 3.61279 7.0962 3.22771C7.0962 3.22771 5.86086 1.62571 5.8402 1.60504C5.45983 1.22221 4.94412 1.00439 4.40448 0.998651C3.86485 0.992913 3.34462 1.19972 2.9562 1.57437L2.18953 2.24104C-2.3398 7.49571 7.41353 17.1737 12.8415 16.9997C13.3897 17.0029 13.9329 16.8962 14.4391 16.686C14.9453 16.4758 15.4042 16.1662 15.7889 15.7757Z" fill="#A3A9B6"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_396_84917">
+                      <rect width="16" height="16" fill="white" transform="translate(1 1)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                  <button>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_396_84920)">
+                      <path d="M16.9693 4.69458L11.3573 10.3066C10.7316 10.9307 9.88383 11.2813 9 11.2813C8.11617 11.2813 7.26842 10.9307 6.64267 10.3066L1.03067 4.69458C1.02133 4.79991 1 4.89525 1 4.99991V12.9999C1.00106 13.8836 1.35259 14.7309 1.97748 15.3558C2.60237 15.9807 3.4496 16.3322 4.33333 16.3332H13.6667C14.5504 16.3322 15.3976 15.9807 16.0225 15.3558C16.6474 14.7309 16.9989 13.8836 17 12.9999V4.99991C17 4.89525 16.9787 4.79991 16.9693 4.69458Z" fill="#A3A9B6"/>
+                      <path d="M10.4148 9.36384L16.5041 3.27384C16.2091 2.78472 15.7931 2.37986 15.2961 2.09832C14.7991 1.81679 14.2379 1.66806 13.6668 1.6665H4.33343C3.76224 1.66806 3.20109 1.81679 2.70411 2.09832C2.20713 2.37986 1.79108 2.78472 1.49609 3.27384L7.58543 9.36384C7.96114 9.73805 8.46982 9.94815 9.00009 9.94815C9.53037 9.94815 10.039 9.73805 10.4148 9.36384Z" fill="#A3A9B6"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_396_84920">
+                      <rect width="16" height="16" fill="white" transform="translate(1 1)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-md-2 position-relative">
+                  <img src="https://freesvg.org/img/FaceWoman.png" alt="">
+                  <span></span>
+                </div>
+                <div class="col-md-7">
+                  <p>Peg Legge</p>
+                  <span>Project Manager</span>
+                </div>
+                <div class="col-md-3 d-flex">
+                  <button>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_396_84917)">
+                      <path d="M16.3335 8.33304C16.1567 8.33304 15.9872 8.2628 15.8621 8.13778C15.7371 8.01276 15.6669 7.84319 15.6669 7.66638C15.6655 6.25232 15.1031 4.89659 14.1032 3.8967C13.1033 2.89681 11.7476 2.33445 10.3335 2.33304C10.1567 2.33304 9.98715 2.2628 9.86213 2.13778C9.7371 2.01276 9.66686 1.84319 9.66686 1.66637C9.66686 1.48956 9.7371 1.31999 9.86213 1.19497C9.98715 1.06995 10.1567 0.999708 10.3335 0.999708C12.101 1.00165 13.7956 1.70465 15.0454 2.95447C16.2953 4.2043 16.9983 5.89886 17.0002 7.66638C17.0002 7.84319 16.93 8.01276 16.8049 8.13778C16.6799 8.2628 16.5103 8.33304 16.3335 8.33304ZM14.3335 7.66638C14.3335 6.60551 13.9121 5.58809 13.162 4.83795C12.4118 4.0878 11.3944 3.66637 10.3335 3.66637C10.1567 3.66637 9.98715 3.73661 9.86213 3.86164C9.7371 3.98666 9.66686 4.15623 9.66686 4.33304C9.66686 4.50985 9.7371 4.67942 9.86213 4.80445C9.98715 4.92947 10.1567 4.99971 10.3335 4.99971C11.0408 4.99971 11.7191 5.28066 12.2191 5.78076C12.7192 6.28085 13.0002 6.95913 13.0002 7.66638C13.0002 7.84319 13.0704 8.01276 13.1955 8.13778C13.3205 8.2628 13.4901 8.33304 13.6669 8.33304C13.8437 8.33304 14.0132 8.2628 14.1383 8.13778C14.2633 8.01276 14.3335 7.84319 14.3335 7.66638ZM15.7889 15.7757L16.3955 15.0764C16.7817 14.689 16.9985 14.1643 16.9985 13.6174C16.9985 13.0704 16.7817 12.5458 16.3955 12.1584C16.3749 12.1377 14.7709 10.9037 14.7709 10.9037C14.3859 10.5373 13.8746 10.3332 13.3431 10.334C12.8116 10.3347 12.3008 10.5402 11.9169 10.9077L10.6462 11.9784C9.60898 11.5491 8.66679 10.9192 7.87372 10.1247C7.08065 9.33028 6.45234 8.387 6.02486 7.34904L7.09153 6.08238C7.45934 5.69849 7.66506 5.18763 7.66593 4.65598C7.6668 4.12433 7.46275 3.61279 7.0962 3.22771C7.0962 3.22771 5.86086 1.62571 5.8402 1.60504C5.45983 1.22221 4.94412 1.00439 4.40448 0.998651C3.86485 0.992913 3.34462 1.19972 2.9562 1.57437L2.18953 2.24104C-2.3398 7.49571 7.41353 17.1737 12.8415 16.9997C13.3897 17.0029 13.9329 16.8962 14.4391 16.686C14.9453 16.4758 15.4042 16.1662 15.7889 15.7757Z" fill="#A3A9B6"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_396_84917">
+                      <rect width="16" height="16" fill="white" transform="translate(1 1)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                  <button>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_396_84920)">
+                      <path d="M16.9693 4.69458L11.3573 10.3066C10.7316 10.9307 9.88383 11.2813 9 11.2813C8.11617 11.2813 7.26842 10.9307 6.64267 10.3066L1.03067 4.69458C1.02133 4.79991 1 4.89525 1 4.99991V12.9999C1.00106 13.8836 1.35259 14.7309 1.97748 15.3558C2.60237 15.9807 3.4496 16.3322 4.33333 16.3332H13.6667C14.5504 16.3322 15.3976 15.9807 16.0225 15.3558C16.6474 14.7309 16.9989 13.8836 17 12.9999V4.99991C17 4.89525 16.9787 4.79991 16.9693 4.69458Z" fill="#A3A9B6"/>
+                      <path d="M10.4148 9.36384L16.5041 3.27384C16.2091 2.78472 15.7931 2.37986 15.2961 2.09832C14.7991 1.81679 14.2379 1.66806 13.6668 1.6665H4.33343C3.76224 1.66806 3.20109 1.81679 2.70411 2.09832C2.20713 2.37986 1.79108 2.78472 1.49609 3.27384L7.58543 9.36384C7.96114 9.73805 8.46982 9.94815 9.00009 9.94815C9.53037 9.94815 10.039 9.73805 10.4148 9.36384Z" fill="#A3A9B6"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_396_84920">
+                      <rect width="16" height="16" fill="white" transform="translate(1 1)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="user-member-chat">
+              
+            </div>
+          </div>
+          
+            
+            <span class="developer">
+              <img
+                src="https://pbs.twimg.com/profile_images/1253782473953157124/x56UURmt_400x400.jpg"
+              />
+              Aysenur Turk — @AysnrTrkk
+            </span>
+          </a>
+      </div>
+    </div>
+  
+    
+    <!-- partial -->
+    <script src="./script.js"></script>
+  </body>
+</html>
